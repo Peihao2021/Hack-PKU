@@ -24,15 +24,16 @@ endif()
 # Our Project
 
 add_executable(${PROJECT_NAME} 
+  src/common.h
   src/main.cpp
-  src/block.h
-  src/block.cpp
   src/map.h
   src/map.cpp
   src/noise.h
   src/noise.cpp
-  src/block.h
-  src/block.cpp) #
+  src/character.h
+  src/character.cpp
+  src/utils.h
+  src/utils.cpp) #
 #set(raylib_VERBOSE 1)
 target_link_libraries(${PROJECT_NAME} raylib)
 

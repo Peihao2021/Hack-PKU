@@ -56,12 +56,13 @@ double Perlin::perlinNoise(double x, double y) {
     return noise;
 }
 
+// deprecated
 Image Perlin::generateImage(int width, int height) {
     Color* pixels = new Color[width * height];
     Perlin perlin;
     for (int i = 0; i < width * height; i++) {
-        double p = perlin.perlinNoise(double(i / width),
-                                      double(i % width)) + 0.25;
+        double p =
+            perlin.perlinNoise(double(i / width), double(i % width)) + 0.25;
         // printf("%lf ", p);
         if (p >= 1)
             pixels[i] = WHITE;

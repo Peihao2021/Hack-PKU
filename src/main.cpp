@@ -1,13 +1,14 @@
-#include <cmath>
-#include <cstdio>
-#include <list>
 #include "character.h"
 #include "map.h"
 #include "noise.h"
 #include "raylib.h"
 #include "utils.h"
+#include <cmath>
+#include <cstdio>
+#include <list>
 
-int main(void) {
+int main(void)
+{
     const int screenWidth = 1920;
     const int screenHeight = 1080;
     const int birth_x = 800;
@@ -16,20 +17,20 @@ int main(void) {
     InitWindow(screenWidth, screenHeight, "HackPKU");
     Texture2D player_text = LoadTexture("assets/player.png");
     Texture2D soccer_text = LoadTexture("assets/soccer.png");
-    Character player_char;  // main character
+    Character player_char; // main character
 
     int soccer_cd = 0;
-    std::list<Character> characters;  // mobs
-    std::list<Character> soccers;     // soccers
-    Map map;                          // world map
+    std::list<Character> characters; // mobs
+    std::list<Character> soccers; // soccers
+    Map map; // world map
     Perlin noise(20.00, 4, 100);
     map.initialize(noise);
     player_char.pos = getBirthPos(map);
     SetTargetFPS(60);
 
     Camera2D camera;
-    camera.target = {player_char.pos.x, player_char.pos.y};
-    camera.offset = {screenWidth / 2.0f, screenHeight / 2.0f};
+    camera.target = { player_char.pos.x, player_char.pos.y };
+    camera.offset = { screenWidth / 2.0f, screenHeight / 2.0f };
     camera.rotation = 0.0f;
     camera.zoom = 2.0f;
 
@@ -42,7 +43,7 @@ int main(void) {
     long long frameCounter = 0;
     while (!WindowShouldClose()) {
         frameCounter++;
-        if (frameCounter % diffIncreaseInterval == 0) {  // increase difficulty
+        if (frameCounter % diffIncreaseInterval == 0) { // increase difficulty
             if (difficulty < 5) {
                 difficulty++;
                 printf("current difficulty: %d\n", difficulty);
@@ -50,23 +51,21 @@ int main(void) {
             }
         }
 
-        if (characters.size() < maxMobAcount &&
-            frameCounter % mobSpwanInterval == 0) {  // spwan mob
+        if (characters.size() < maxMobAcount && frameCounter % mobSpwanInterval == 0) { // spwan mob
             int randx = rand() % WIDTH;
             int randy = rand() % HEIGHT;
             Character tmp;
-            tmp.pos = {(float)randx * 31, (float)randy * 31};
+            tmp.pos = { (float)randx * 31, (float)randy * 31 };
             tmp.speed = 3;
             tmp.attackInterval = 60;
             characters.push_back(tmp);
             printf("current mob number: %lld\n", characters.size());
         }
 
-        for (auto& c : characters) {  // set mob speed
+        for (auto& c : characters) { // set mob speed
             int axis_x = c.pos.x / 31;
             int axis_y = c.pos.y / 31;
-            if (axis_x >= WIDTH || axis_y >= HEIGHT || axis_x <= 0 ||
-                axis_y <= 0) {
+            if (axis_x >= WIDTH || axis_y >= HEIGHT || axis_x <= 0 || axis_y <= 0) {
                 c.speed = -c.speed;
             } else if (map.map[axis_x][axis_y] == BlockType::Water) {
                 c.speed = 2;
@@ -75,9 +74,9 @@ int main(void) {
             }
         }
 
-        updateCharacterPos(characters, player_char);  // mob move
+        updateCharacterPos(characters, player_char); // mob move
 
-        for (auto& c : characters) {  // mob attack
+        for (auto& c : characters) { // mob attack
             if (getDistance(c.pos, player_char.pos) < 5) {
                 if (c.attackCounter == 0) {
                     c.attackCounter = c.attackInterval;
@@ -126,8 +125,8 @@ int main(void) {
             if (soccer_cd == 0) {
                 Character tmp;
                 tmp.pos = player_char.pos;
-                tmp.dir = {GetMouseX() - camera.offset.x,
-                                   GetMouseY() - camera.offset.y};
+                tmp.dir = { GetMouseX() - camera.offset.x,
+                    GetMouseY() - camera.offset.y };
                 tmp.attackCounter = 0;
                 tmp.speed = 6;
                 soccers.push_back(tmp);
@@ -141,7 +140,7 @@ int main(void) {
             bool collision = false;
             auto i = characters.begin();
             while (i != characters.end()) {
-                if (getDistance(i->pos, iter->pos) <= 5) {
+                if (getDistance(i->pos, iter->pos) <= 30) {
                     i = characters.erase(i);
                     collision = true;
                 } else {
@@ -154,14 +153,37 @@ int main(void) {
                 iter++;
             }
         }
-        for (auto& soccer: soccers) {
+        // std::list<Character> soccersToRemove;
+        // std::list<Character> charactersToRemove;
+        // for (Character& i : soccers) {
+        //     bool removeThis = 0;
+        //     for (Character& j : characters) {
+        //         if (getDistance((Vector2){i.pos.x, i.pos.y}, j.pos) < 30) {
+        //             charactersToRemove.push_back(j);
+        //             removeThis = 1;
+        //         }
+        //     }
+        //     if (removeThis) {
+        //         soccersToRemove.push_back(i);
+        //     }
+        // }
+        // for (Character& i : soccers) {
+        //     if (i.attackCounter >= 240)
+        //         soccersToRemove.push_back(i);
+        // }
+        // for (Character& i : soccersToRemove) {
+        //     soccers.remove(i);
+        // }
+        // for (Character& i : charactersToRemove) {
+        //     characters.remove(i);
+        // }
+        for (auto& soccer : soccers) {
             soccer.updatePos();
             soccer.attackCounter += 1;
         }
         if (soccer_cd > 0) {
             soccer_cd -= 1;
         }
-
 
         // printf("TIGER: %f, %f\n", player_char.pos.x, player_char.pos.y);
 
@@ -175,7 +197,7 @@ int main(void) {
         BeginDrawing();
 
         ClearBackground(WHITE);
-        camera.target = {player_char.pos.x, player_char.pos.y};
+        camera.target = { player_char.pos.x, player_char.pos.y };
         if (camera.target.x < birth_x) {
             camera.target.x = birth_x;
         }

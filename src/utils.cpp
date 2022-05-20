@@ -57,7 +57,7 @@ void drawCharacters(const std::list<Character>& characters) {
 }
 
 double getDistance(const Vector2& a, const Vector2& b) {
-    return sqrt(((a.x - b.x) * (a.x - b.x)) - ((a.y - b.y) * (a.y - b.y)));
+    return sqrt(((a.x - b.x) * (a.x - b.x)) + ((a.y - b.y) * (a.y - b.y)));
 }
 
 Vector2 getBirthPos(Map& map) {

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include "character.h"
 #include "noise.h"
 #include "raylib.h"
 
@@ -14,10 +15,11 @@ enum class BlockType : int {
 };
 
 const std::vector<std::string> BLOCK_PATH = {
-    "assets/water.png", "assets/dirt.png", "assets/grass.png", "assets/sand.png"};
+    "assets/water.png", "assets/dirt.png", "assets/grass.png",
+    "assets/sand.png"};
 
-const int WIDTH = 300;
-const int HEIGHT = 300;
+const int WIDTH = 100;
+const int HEIGHT = 100;
 
 class Map {
    public:

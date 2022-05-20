@@ -8,9 +8,16 @@ class Perlin {
    public:
     double persistence;
     int num_octaves;
+    double scale;
     Perlin() {
         persistence = 2.00;
         num_octaves = 3;
+        scale = 1.0;
+    }
+    Perlin(double persist, int octaves, double scale) {
+        persistence = persist;
+        num_octaves = octaves;
+        this->scale = scale;
     }
     double noise(int x, int y);
     double smoothedNoise(int x, int y);

@@ -41,6 +41,8 @@ double Perlin::interpolatedNoise(double x, double y) {
 }
 
 double Perlin::perlinNoise(double x, double y) {
+    x /= scale;
+    y /= scale;
     double noise = 0;
     double p = persistence;
     int n = num_octaves;
@@ -58,9 +60,8 @@ Image Perlin::generateImage(int width, int height) {
     Color* pixels = new Color[width * height];
     Perlin perlin;
     for (int i = 0; i < width * height; i++) {
-        double p = perlin.perlinNoise(double(i / width) / 220.0,
-                                      double(i % width) / 220.0) +
-                   0.25;
+        double p = perlin.perlinNoise(double(i / width),
+                                      double(i % width)) + 0.25;
         // printf("%lf ", p);
         if (p >= 1)
             pixels[i] = WHITE;

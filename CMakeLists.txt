@@ -30,7 +30,9 @@ add_executable(${PROJECT_NAME}
   src/map.h
   src/map.cpp
   src/noise.h
-  src/noise.cpp) #
+  src/noise.cpp
+  src/block.h
+  src/block.cpp) #
 #set(raylib_VERBOSE 1)
 target_link_libraries(${PROJECT_NAME} raylib)
 

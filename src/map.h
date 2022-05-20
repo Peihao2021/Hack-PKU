@@ -18,13 +18,6 @@ const std::vector<std::string> BLOCK_PATH = {
 const int WIDTH = 100;
 const int HEIGHT = 100;
 
-const Texture2D WATER_TEXT =
-    LoadTexture(BLOCK_PATH[(int)BlockType::Water].c_str());
-const Texture2D DIRT_TEXT =
-    LoadTexture(BLOCK_PATH[(int)BlockType::Dirt].c_str());
-const Texture2D GRASS_TEXT =
-    LoadTexture(BLOCK_PATH[(int)BlockType::Grass].c_str());
-
 class Map {
    public:
     Map();

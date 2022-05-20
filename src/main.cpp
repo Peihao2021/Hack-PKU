@@ -48,10 +48,11 @@ int main(void) {
 
         ClearBackground(WHITE);
         camera.target = {tiger_pos.x, tiger_pos.y};
+        camera.zoom += ((float)GetMouseWheelMove()*0.05f);
 
         BeginMode2D(camera);
-        DrawTextureEx(tiger, tiger_pos, 0.f, 1.f, WHITE);
         drawMap(map);
+        DrawTextureEx(tiger, tiger_pos, 0.f, 5.f, WHITE);
         EndMode2D();
 
         EndDrawing();

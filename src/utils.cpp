@@ -2,6 +2,11 @@
 #include "utils.h"
 
 void drawMap(const Map& map) {
+    static Texture2D WATER_TEXT =
+        LoadTexture(BLOCK_PATH[(int)BlockType::Water].c_str());
+    static Texture2D DIRT_TEXT = LoadTexture(BLOCK_PATH[(int)BlockType::Dirt].c_str());
+    static Texture2D GRASS_TEXT =
+        LoadTexture(BLOCK_PATH[(int)BlockType::Grass].c_str());
 
     float x = 0;
     float y = 0;
@@ -14,18 +19,17 @@ void drawMap(const Map& map) {
             y = j * d;
             switch (map.map[i][j]) {
                 case BlockType::Water:
-                    DrawTextureEx(WATER_TEXT, {x, y}, 0.f, 1.f, WHITE);
+                    DrawTextureEx(WATER_TEXT, {x, y}, 0.f, 2.f, WHITE);
                     break;
                 case BlockType::Dirt:
-                    DrawTextureEx(DIRT_TEXT, {x, y}, 0.f, 1.f, WHITE);
+                    DrawTextureEx(DIRT_TEXT, {x, y}, 0.f, 2.f, WHITE);
                     break;
                 case BlockType::Grass:
-                    DrawTextureEx(GRASS_TEXT, {x, y}, 0.f, 1.f, WHITE);
+                    DrawTextureEx(GRASS_TEXT, {x, y}, 0.f, 2.f, WHITE);
                     break;
                 default:
                     break;
             }
         }
     }
-
 }

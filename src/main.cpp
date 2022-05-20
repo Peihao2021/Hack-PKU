@@ -1,15 +1,18 @@
+#include "noise.h"
 #include "raylib.h"
+#include <cstdio>
 
-int main(void) {
+int main(void)
+{
     const int screenWidth = 1920;
     const int screenHeight = 1080;
 
     InitWindow(screenWidth, screenHeight, "HackPKU");
-
     Texture2D tiger = LoadTexture("assets/tiger.png");
     Vector2 tiger_pos = { 800, 500 };
-
-
+    Image noise = Perlin::generateImage(1000, 1000);
+    Texture2D noise_tex = LoadTextureFromImage(noise);
+    
     SetTargetFPS(60);
 
     while (!WindowShouldClose()) {
@@ -30,9 +33,8 @@ int main(void) {
         BeginDrawing();
 
         ClearBackground(WHITE);
-
-
-        DrawTextureEx(tiger, tiger_pos, 0, 5.0, WHITE);
+        DrawTexture(noise_tex, 0, 0, WHITE);
+        // DrawTextureEx(tiger, tiger_pos, 0, 5.0, WHITE);
 
         EndDrawing();
     }

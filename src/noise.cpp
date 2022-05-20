@@ -53,3 +53,33 @@ double Perlin::PerlinNoise(float x, float y) // 最终调用：根据(x,y)获得
 
     return noise;
 }
+
+ Image Perlin::generateImage(int width, int height)
+{
+    Color* pixels = new Color[width * height];
+    Perlin perlin;
+    for (int i = 0; i < width * height; i++) {
+        double p = perlin.PerlinNoise(double(i / width) / 220.0, double(i % width) / 220.0) + 0.25;
+        // printf("%lf ", p);
+        if (p >= 1)
+            pixels[i] = WHITE;
+        else if (p <= 0)
+            pixels[i] = BLACK;
+        else
+            pixels[i] = { (unsigned char)(p * 255),
+                (unsigned char)(p * 255),                                         
+                (unsigned char)(p * 255),
+                255 };
+        // printf("%d ", pixels[i].r);
+    }
+
+    Image image = {
+        .data = pixels,
+        .width = width,
+        .height = height,
+        .mipmaps = 1,
+        .format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8
+    };                   
+
+    return image;
+}

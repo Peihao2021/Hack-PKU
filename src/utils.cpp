@@ -4,9 +4,12 @@
 void drawMap(const Map& map) {
     static Texture2D WATER_TEXT =
         LoadTexture(BLOCK_PATH[(int)BlockType::Water].c_str());
-    static Texture2D DIRT_TEXT = LoadTexture(BLOCK_PATH[(int)BlockType::Dirt].c_str());
+    static Texture2D DIRT_TEXT = 
+        LoadTexture(BLOCK_PATH[(int)BlockType::Dirt].c_str());
     static Texture2D GRASS_TEXT =
         LoadTexture(BLOCK_PATH[(int)BlockType::Grass].c_str());
+    static Texture2D SAND_TEXT =
+        LoadTexture(BLOCK_PATH[(int)BlockType::Sand].c_str());
 
     float x = 0;
     float y = 0;
@@ -26,6 +29,9 @@ void drawMap(const Map& map) {
                     break;
                 case BlockType::Grass:
                     DrawTextureEx(GRASS_TEXT, {x, y}, 0.f, 2.f, WHITE);
+                    break;
+                case BlockType::Sand:
+                    DrawTextureEx(SAND_TEXT, {x, y}, 0.f, 2.f, WHITE);
                     break;
                 default:
                     break;

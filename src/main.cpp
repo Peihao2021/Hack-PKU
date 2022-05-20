@@ -12,9 +12,9 @@ int main(void) {
     Texture2D tiger = LoadTexture("assets/tiger.png");
     Vector2 tiger_pos = {800, 500};
     Map map;
-    Perlin noise(10.00, 4, 60);
-    map.initialize(noise, 0.1);
-    // for (int i = 0; i < WIDTH; i++) {
+    Perlin noise(20.00, 4, 100);
+    map.initialize(noise);
+    // for (int i = 0; i < WIDTH ; i++) {
     //     for (int j = 0; j < HEIGHT; j++) {
     //         printf("%d ", map.map[i][j]);
     //     }
@@ -28,20 +28,20 @@ int main(void) {
     camera.target = {tiger_pos.x, tiger_pos.y};
     camera.offset = {screenWidth / 2.0f, screenHeight / 2.0f};
     camera.rotation = 0.0f;
-    camera.zoom = 1.0f;
+    camera.zoom = 2.0f;
 
     while (!WindowShouldClose()) {
         if (IsKeyDown(KEY_W)) {
-            tiger_pos.y -= 5;
+            tiger_pos.y -= 3;
         }
         if (IsKeyDown(KEY_S)) {
-            tiger_pos.y += 5;
+            tiger_pos.y += 3;
         }
         if (IsKeyDown(KEY_A)) {
-            tiger_pos.x -= 5;
+            tiger_pos.x -= 3;
         }
         if (IsKeyDown(KEY_D)) {
-            tiger_pos.x += 5;
+            tiger_pos.x += 3;
         }
 
         BeginDrawing();

@@ -10,18 +10,19 @@ enum class BlockType : int {
     Water = 0,
     Dirt = 1,
     Grass = 2,
+    Sand = 3,
 };
 
 const std::vector<std::string> BLOCK_PATH = {
-    "assets/water.png", "assets/dirt.png", "assets/grass.png"};
+    "assets/water.png", "assets/dirt.png", "assets/grass.png", "assets/sand.png"};
 
-const int WIDTH = 100;
-const int HEIGHT = 100;
+const int WIDTH = 300;
+const int HEIGHT = 300;
 
 class Map {
    public:
     Map();
-    void initialize(Perlin& noise, double thre);
+    void initialize(Perlin& noise);
 
     std::vector<std::vector<BlockType>> map;
 };

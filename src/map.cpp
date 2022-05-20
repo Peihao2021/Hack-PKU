@@ -1,4 +1,5 @@
 #include "map.h"
+#include <cmath>
 
 Map::Map() {
     map.resize(HEIGHT, std::vector<BlockType>(WIDTH));
@@ -21,4 +22,12 @@ void Map::initialize(Perlin& noise) {
                 map[i][j] = BlockType::Grass;
         }
     }
+}
+
+CharacterMap::CharacterMap() {}
+
+
+bool inRange(int x1, int y1, int x2, int y2, double range) {
+    double dist = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+    return (dist <= range);
 }

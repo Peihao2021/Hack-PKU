@@ -1,6 +1,8 @@
 #include "character.h"
 
 
-Character::Character(const std::string& asset_path) {
-    this->asset_path = asset_path;
+Character::Character() {
+    hp = 100;
+    hunger = 100;
+    mp = 100;
 }

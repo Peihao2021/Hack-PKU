@@ -25,9 +25,9 @@ int main(void) {
 
     // Define the camera to look into our 3d world (position, target, up vector)
     Camera camera = {0};
-    camera.position = (Vector3){4.0f, 2.0f, 4.0f};
-    camera.target = (Vector3){0.0f, 1.8f, 0.0f};
-    camera.up = (Vector3){0.0f, 1.0f, 0.0f};
+    camera.position = {4.0f, 2.0f, 4.0f};
+    camera.target = {0.0f, 1.8f, 0.0f};
+    camera.up = {0.0f, 1.0f, 0.0f};
     camera.fovy = 60.0f;
     camera.projection = CAMERA_PERSPECTIVE;
 
@@ -38,11 +38,10 @@ int main(void) {
 
     for (int i = 0; i < MAX_COLUMNS; i++) {
         heights[i] = (float)GetRandomValue(1, 12);
-        positions[i] =
-            (Vector3){(float)GetRandomValue(-15, 15), heights[i] / 2.0f,
-                      (float)GetRandomValue(-15, 15)};
-        colors[i] =
-            (Color){GetRandomValue(20, 255), GetRandomValue(10, 55), 30, 255};
+        positions[i] = {(float)GetRandomValue(-15, 15), heights[i] / 2.0f,
+                        (float)GetRandomValue(-15, 15)};
+        colors[i] = {(unsigned char)GetRandomValue(20, 255),
+                            (unsigned char)GetRandomValue(10, 55), 30, 255};
     }
 
     SetCameraMode(camera,
@@ -66,13 +65,13 @@ int main(void) {
 
         BeginMode3D(camera);
 
-        DrawPlane((Vector3){0.0f, 0.0f, 0.0f}, (Vector2){32.0f, 32.0f},
+        DrawPlane({0.0f, 0.0f, 0.0f}, {32.0f, 32.0f},
                   LIGHTGRAY);  // Draw ground
-        DrawCube((Vector3){-16.0f, 2.5f, 0.0f}, 1.0f, 5.0f, 32.0f,
+        DrawCube({-16.0f, 2.5f, 0.0f}, 1.0f, 5.0f, 32.0f,
                  BLUE);  // Draw a blue wall
-        DrawCube((Vector3){16.0f, 2.5f, 0.0f}, 1.0f, 5.0f, 32.0f,
+        DrawCube({16.0f, 2.5f, 0.0f}, 1.0f, 5.0f, 32.0f,
                  LIME);  // Draw a green wall
-        DrawCube((Vector3){0.0f, 2.5f, 16.0f}, 32.0f, 5.0f, 1.0f,
+        DrawCube({0.0f, 2.5f, 16.0f}, 32.0f, 5.0f, 1.0f,
                  GOLD);  // Draw a yellow wall
 
         // Draw some cubes around

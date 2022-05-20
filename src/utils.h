@@ -1,10 +1,10 @@
 #ifndef UTILS_H_
 #define UTILS_H_
 
-#include "map.h"
-#include "character.h"
-#include "raylib.h"
 #include <list>
+#include "character.h"
+#include "map.h"
+#include "raylib.h"
 
 void drawMap(const Map& map);
 void updateCharacterPos(std::list<Character>& characters, Character& player);

@@ -25,4 +25,6 @@ class Character {
     int attackCounter;
 };
 
+bool operator==(const Character& lhs, const Character& rhs);
+
 #endif  // CHARACTER_H_

@@ -15,8 +15,12 @@ int main(void) {
 
     InitWindow(screenWidth, screenHeight, "HackPKU");
     Texture2D player_text = LoadTexture("assets/player.png");
-    Character player_char;            // main character
+    Texture2D soccer_text = LoadTexture("assets/soccer.png");
+    Character player_char;  // main character
+
+    int soccer_cd = 0;
     std::list<Character> characters;  // mobs
+    std::list<Character> soccers;     // soccers
     Map map;                          // world map
     Perlin noise(20.00, 4, 100);
     map.initialize(noise);
@@ -32,8 +36,8 @@ int main(void) {
     // TODO: boundary of southeast
     int speed = 5;
     int difficulty = 0;
-    int diffIncreaseInterval = 600;
-    int mobSpwanInterval = 240;
+    int diffIncreaseInterval = 800;
+    int mobSpwanInterval = 300;
     size_t maxMobAcount = 200;
     long long frameCounter = 0;
     while (!WindowShouldClose()) {
@@ -58,7 +62,7 @@ int main(void) {
             printf("current mob number: %lld\n", characters.size());
         }
 
-        for (auto& c : characters) { // set mob speed 
+        for (auto& c : characters) {  // set mob speed
             int axis_x = c.pos.x / 31;
             int axis_y = c.pos.y / 31;
             if (axis_x >= WIDTH || axis_y >= HEIGHT || axis_x <= 0 ||
@@ -73,13 +77,13 @@ int main(void) {
 
         updateCharacterPos(characters, player_char);  // mob move
 
-        for (auto& cara : characters) {  // mob attack
-            if (getDistance(cara.pos, player_char.pos) < 5) {
-                if (cara.attackCounter == 0) {
-                    cara.attackCounter = cara.attackInterval;
+        for (auto& c : characters) {  // mob attack
+            if (getDistance(c.pos, player_char.pos) < 5) {
+                if (c.attackCounter == 0) {
+                    c.attackCounter = c.attackInterval;
                     printf("hp decreased!\n");
                 } else {
-                    cara.attackCounter--;
+                    c.attackCounter--;
                 }
             }
         }
@@ -118,6 +122,46 @@ int main(void) {
         if (IsKeyDown(KEY_KP_4)) {
             player_char.skill = Skill::Fishing;
         }
+        if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+            if (soccer_cd == 0) {
+                Character tmp;
+                tmp.pos = player_char.pos;
+                tmp.dir = {GetMouseX() - camera.offset.x,
+                                   GetMouseY() - camera.offset.y};
+                tmp.attackCounter = 0;
+                tmp.speed = 6;
+                soccers.push_back(tmp);
+                soccer_cd = 10;
+            }
+        }
+        // std::printf("SOCCER CD: %d\n", soccer_cd);
+
+        auto iter = soccers.begin();
+        while (iter != soccers.end()) {
+            bool collision = false;
+            auto i = characters.begin();
+            while (i != characters.end()) {
+                if (getDistance(i->pos, iter->pos) <= 5) {
+                    i = characters.erase(i);
+                    collision = true;
+                } else {
+                    i++;
+                }
+            }
+            if (collision || iter->attackCounter >= 240) {
+                iter = soccers.erase(iter);
+            } else {
+                iter++;
+            }
+        }
+        for (auto& soccer: soccers) {
+            soccer.updatePos();
+            soccer.attackCounter += 1;
+        }
+        if (soccer_cd > 0) {
+            soccer_cd -= 1;
+        }
+
 
         // printf("TIGER: %f, %f\n", player_char.pos.x, player_char.pos.y);
 
@@ -147,6 +191,10 @@ int main(void) {
         drawMap(map);
         drawCharacters(characters);
         DrawTextureEx(player_text, player_char.pos, 0.f, 1.f, WHITE);
+        for (auto& soccer : soccers) {
+            DrawTextureEx(soccer_text, soccer.pos, 0.f, 0.5f, WHITE);
+        }
+
         EndMode2D();
 
         EndDrawing();

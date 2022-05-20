@@ -2,6 +2,7 @@
 #define NOISE_H
 
 #include <cmath>
+#include <ctime>
 #include "raylib.h"
 
 class Perlin {
@@ -9,15 +10,18 @@ class Perlin {
     double persistence;
     int num_octaves;
     double scale;
+    int seed;
     Perlin() {
         persistence = 2.00;
         num_octaves = 3;
         scale = 1.0;
+        seed = time(0);
     }
     Perlin(double persist, int octaves, double scale) {
         persistence = persist;
         num_octaves = octaves;
         this->scale = scale;
+        seed = time(0);
     }
     double noise(int x, int y);
     double smoothedNoise(int x, int y);

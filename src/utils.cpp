@@ -41,14 +41,12 @@ void drawMap(const Map& map) {
     }
 }
 
-
 void updateCharacterPos(std::list<Character>& characters, Character& player) {
     for (auto& c : characters) {
         c.dir = {player.pos.x - c.pos.x, player.pos.y - c.pos.y};
         c.updatePos();
     }
 }
-
 
 void drawCharacters(const std::list<Character>& characters) {
     static Texture2D MOB_TEXT = LoadTexture("assets/tiger.png");

@@ -80,10 +80,10 @@ Vector2 getBirthPos(Map& map) {
     return Vector2{float(randx * 31), float(randy * 31)};
 }
 
-void displayInfo(int exp, int mob_cnt, int difficulty) {
+void displayInfo(int exp, int mob_cnt, int difficulty, int cd) {
     std::stringstream buffer;
-    buffer << "| Your Score: " << exp << " | Mob number: " << mob_cnt
-           << " | Difficulty: " << difficulty << " |";
-    DrawRectangle(10, 10, 1300, 80, GRAY);
-    DrawText(buffer.str().c_str(), 25, 25, 50, WHITE);
+    buffer << "| Your Score: " << exp << " | Mob Number: " << mob_cnt
+           << " | Difficulty: " << difficulty << " | Cooling: " << cd << " |";
+    DrawRectangle(0, 0, 1920, 50, GRAY);
+    DrawText(buffer.str().c_str(), 10, 10, 30, WHITE);
 }

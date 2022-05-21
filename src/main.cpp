@@ -18,7 +18,7 @@ int main(void) {
     // const int birth_y = 500;
     int marginx = screenWidth / 4;
     int marginy = screenHeight / 4;
-    InitWindow(screenWidth, screenHeight, "HackPKU");
+    InitWindow(screenWidth, screenHeight, "Soccer War");
     Texture2D player_texts[12];
     for (int i = 0; i < 12; i++) {
         std::string file = "assets/player/" + std::to_string(i + 1) + ".png";
@@ -51,7 +51,7 @@ int main(void) {
     camera.target = {player_char.pos.x, player_char.pos.y};
     camera.offset = {screenWidth / 2.0f, screenHeight / 2.0f};
     camera.rotation = 0.0f;
-    camera.zoom = 2.0f;
+    camera.zoom = 3.0f;
 
     int speed = 5;
     int exp = 0;
@@ -64,44 +64,43 @@ int main(void) {
     size_t maxMobAcount = 200;
     size_t frameCounter = 0;
 
-    std::list<Vector2> stones; //generate stones
-    for(int i = 0; i < 100; i++){
+    std::list<Vector2> stones;  // generate stones
+    for (int i = 0; i < 100; i++) {
         Vector2 pos = getBirthPos(map);
         stones.push_back(pos);
     }
-    std::list<Vector2> cactus; //generate cactus
-    for(int i = 0; i < 50; i++){
+    std::list<Vector2> cactus;  // generate cactus
+    for (int i = 0; i < 50; i++) {
         Vector2 pos = getBirthPos(map);
         cactus.push_back(pos);
     }
-    std::list<Vector2> branches; //generate branches
-    for(int i = 0; i < 50; i++){
+    std::list<Vector2> branches;  // generate branches
+    for (int i = 0; i < 50; i++) {
         Vector2 pos = getBirthPos(map);
         branches.push_back(pos);
     }
-    std::list<Vector2> ores; //generate ores
-    for(int i = 0; i < 30; i++){
+    std::list<Vector2> ores;  // generate ores
+    for (int i = 0; i < 30; i++) {
         Vector2 pos = getBirthPos(map);
         ores.push_back(pos);
     }
-    std::list<Vector2> golds; //generate golds
-    for(int i = 0; i < 20; i++){
+    std::list<Vector2> golds;  // generate golds
+    for (int i = 0; i < 20; i++) {
         Vector2 pos = getBirthPos(map);
         golds.push_back(pos);
     }
-    std::list<Vector2> diamonds; //generate diamonds
-    for(int i = 0; i < 10; i++){
+    std::list<Vector2> diamonds;  // generate diamonds
+    for (int i = 0; i < 10; i++) {
         Vector2 pos = getBirthPos(map);
         diamonds.push_back(pos);
     }
-    
+
     while (!WindowShouldClose()) {
         UpdateMusicStream(bgm);
         frameCounter++;
         if (frameCounter % diffIncreaseInterval == 0) {  // increase difficulty
             if (difficulty < 5) {
                 difficulty++;
-                printf("current difficulty: %d\n", difficulty);
             }
         }
         if (mobs.size() < maxMobAcount &&
@@ -111,13 +110,13 @@ int main(void) {
             Character tmp;
             tmp.pos = {(float)randx * 31, (float)randy * 31};
             int mobtype = rand() % 2;
-            if(mobtype == 1){
+            if (mobtype == 1) {
                 tmp.type = 6;
                 tmp.speedOnLand = 3;
                 tmp.speedInSea = 2;
                 tmp.attackInterval = 40;
                 mobs.push_back(tmp);
-            }else{
+            } else {
                 tmp.type = rand() % 5 + 1;
                 tmp.speedOnLand = 2;
                 tmp.speedInSea = 5;
@@ -165,7 +164,7 @@ int main(void) {
         }
         orientation orient = Down;
         bool hasKeyPressed = 0;
-        if (IsKeyDown(KEY_W)) { //player move
+        if (IsKeyDown(KEY_W)) {  // player move
             player_char.pos.y -= speed;
             orient = Up;
             hasKeyPressed = 1;
@@ -189,24 +188,26 @@ int main(void) {
             animationCounter++;
         }
 
-        for(auto ore = ores.begin(); ore != ores.end(); ore++){ // check ores
-            if(getDistance(player_char.pos, {ore->x, ore->y}) < 25){
+        for (auto ore = ores.begin(); ore != ores.end(); ore++) {  // check ores
+            if (getDistance(player_char.pos, {ore->x, ore->y}) < 25) {
                 ores.erase(ore);
                 ores.push_back(getBirthPos(map));
                 exp += 5;
                 break;
             }
         }
-        for(auto gold = golds.begin(); gold != golds.end(); gold++){ // check ores
-            if(getDistance(player_char.pos, {gold->x, gold->y}) < 25){
+        for (auto gold = golds.begin(); gold != golds.end();
+             gold++) {  // check ores
+            if (getDistance(player_char.pos, {gold->x, gold->y}) < 25) {
                 golds.erase(gold);
                 golds.push_back(getBirthPos(map));
                 exp += 10;
                 break;
             }
         }
-        for(auto diamond = diamonds.begin(); diamond != diamonds.end(); diamond++){ // check ores
-            if(getDistance(player_char.pos, {diamond->x, diamond->y}) < 25){
+        for (auto diamond = diamonds.begin(); diamond != diamonds.end();
+             diamond++) {  // check ores
+            if (getDistance(player_char.pos, {diamond->x, diamond->y}) < 25) {
                 diamonds.erase(diamond);
                 diamonds.push_back(getBirthPos(map));
                 exp += 20;
@@ -235,7 +236,7 @@ int main(void) {
                 tmp.attackCounter = 0;
                 tmp.speed = 6;
                 soccers.push_back(tmp);
-                soccer_cd = 10;
+                soccer_cd = 80;
             }
         }
 
@@ -285,25 +286,28 @@ int main(void) {
         camera.target = {player_char.pos.x, player_char.pos.y};
 
         camera.zoom += ((float)GetMouseWheelMove() * 0.05f);
+        if (camera.zoom <= 2.5f) {
+            camera.zoom = 2.5f;
+        }
 
         BeginMode2D(camera);
-        drawMap(map);    // draw map
-        for(auto& st : stones){
+        drawMap(map);  // draw map
+        for (auto& st : stones) {
             DrawTextureEx(stone_text, st, 0.f, 1.f, WHITE);
         }
-        for(auto& cac : cactus){
+        for (auto& cac : cactus) {
             DrawTextureEx(cactus_text, cac, 0.f, 1.f, WHITE);
         }
-        for(auto& br : branches){
+        for (auto& br : branches) {
             DrawTextureEx(branch_text, br, 0.f, 1.f, WHITE);
         }
-        for(auto& ore : ores){
+        for (auto& ore : ores) {
             DrawTextureEx(ore_text, ore, 0.f, 1.f, WHITE);
         }
-        for(auto& dia : diamonds){
+        for (auto& dia : diamonds) {
             DrawTextureEx(diamond_text, dia, 0.f, 0.5f, WHITE);
         }
-        for(auto& gold : golds){
+        for (auto& gold : golds) {
             DrawTextureEx(gold_text, gold, 0.f, 0.5f, WHITE);
         }
         drawMobs(mobs);  // draw mobs
@@ -323,7 +327,7 @@ int main(void) {
         }
 
         EndMode2D();
-        displayInfo(exp, mobs.size(), difficulty);
+        displayInfo(exp, mobs.size(), difficulty, soccer_cd);
 
         EndDrawing();
     }

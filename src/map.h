@@ -15,7 +15,7 @@ enum class BlockType : int {
 };
 
 const std::vector<std::string> BLOCK_PATH = {
-    "assets/water.png", "assets/dirt.png", "assets/grass.png",
+    "assets/front_sea2.png", "assets/dirt.png", "assets/grass.png",
     "assets/sand.png"};
 
 const int WIDTH = 100;

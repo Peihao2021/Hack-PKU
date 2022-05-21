@@ -42,16 +42,16 @@ void drawMap(const Map& map) {
     }
 }
 
-void updateCharacterPos(std::list<Character>& characters, Character& player) {
-    for (auto& c : characters) {
+void updateMobPos(std::list<Character>& mobs, Character& player) {
+    for (auto& c : mobs) {
         c.dir = {player.pos.x - c.pos.x, player.pos.y - c.pos.y};
         c.updatePos();
     }
 }
 
-void drawCharacters(const std::list<Character>& characters) {
+void drawMobs(const std::list<Character>& mobs) {
     static Texture2D MOB_TEXT = LoadTexture("assets/tiger.png");
-    for (auto& c : characters) {
+    for (auto& c : mobs) {
         // std::cout << "ok" << std::endl;
         DrawTextureEx(MOB_TEXT, c.pos, 0.f, 1.f, WHITE);
     }
@@ -71,9 +71,10 @@ Vector2 getBirthPos(Map& map) {
     return Vector2{float(randx * 31), float(randy * 31)};
 }
 
-
-void displayExp(int exp) {
+void displayInfo(int exp, int mob_cnt, int difficulty) {
     std::stringstream buffer;
-    buffer << "Your Exp: " << exp;
-    DrawText(buffer.str().c_str(), 10, 10, 50, DARKGRAY);
+    buffer << "| Your Exp: " << exp << " | Mob number: " << mob_cnt
+           << " | Difficulty: " << difficulty << " |";
+    DrawRectangle(10, 10, 1300, 80, GRAY);
+    DrawText(buffer.str().c_str(), 25, 25, 50, WHITE);
 }

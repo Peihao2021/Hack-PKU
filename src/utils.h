@@ -7,9 +7,9 @@
 #include "raylib.h"
 
 void drawMap(const Map& map);
-void updateCharacterPos(std::list<Character>& characters, Character& player);
-void drawCharacters(const std::list<Character>& characters);
+void updateMobPos(std::list<Character>& characters, Character& player);
+void drawMobs(const std::list<Character>& characters);
 double getDistance(const Vector2& a, const Vector2& b);
 Vector2 getBirthPos(Map& map);
-void displayExp(int exp);
+void displayInfo(int exp, int mob_cnt, int difficulty);
 #endif  // UTILS_H_

@@ -1,11 +1,19 @@
 #include <cmath>
 #include <cstdio>
 #include <list>
+#include <string>
 #include "character.h"
 #include "map.h"
 #include "noise.h"
 #include "raylib.h"
 #include "utils.h"
+
+enum orientation{
+    Down = 0,
+    Left = 1, 
+    Right = 2, 
+    Up = 3
+    };
 
 int main(void) {
     const int screenWidth = 1920;
@@ -15,7 +23,11 @@ int main(void) {
     int marginx = screenWidth / 4;
     int marginy = screenHeight / 4;
     InitWindow(screenWidth, screenHeight, "HackPKU");
-    Texture2D player_text = LoadTexture("assets/player.png");
+    Texture2D player_texts[12];
+    for(int i = 0; i < 12; i++){
+        std::string file = "assets/player/" + std::to_string(i + 1) + ".png";
+        player_texts[i] = LoadTexture(file.c_str());
+    }
     Texture2D soccer_text = LoadTexture("assets/soccer.png");
     Character player_char;  // main character
 
@@ -38,14 +50,16 @@ int main(void) {
     camera.rotation = 0.0f;
     camera.zoom = 2.0f;
 
-    // TODO: boundary of southeast
     int speed = 5;
     int exp = 0;
     int difficulty = 0;
     int diffIncreaseInterval = 800;
     int mobSpwanInterval[6] = {300, 250, 200, 150, 100, 50};
-    size_t maxMobAcount = 200;
-    long long frameCounter = 0;
+    int charaAnimationInterval = 10;
+    int beingAttackedCounter = 0;
+    size_t animationCounter = 0;
+    int maxMobAcount = 200;
+    size_t frameCounter = 0;
     while (!WindowShouldClose()) {
         frameCounter++;
         if (frameCounter % diffIncreaseInterval == 0) {  // increase difficulty
@@ -61,7 +75,7 @@ int main(void) {
             Character tmp;
             tmp.pos = {(float)randx * 31, (float)randy * 31};
             tmp.speed = 3;
-            tmp.attackInterval = 60;
+            tmp.attackInterval = 40;
             mobs.push_back(tmp);
             printf("current mob number: %lld\n", mobs.size());
         }
@@ -80,11 +94,11 @@ int main(void) {
         }
 
         updateMobPos(mobs, player_char);  // mob move
-
         for (auto& c : mobs) {  // mob attack
-            if (getDistance(c.pos, player_char.pos) < 5) {
+            if (getDistance(c.pos, player_char.pos) < 8) {
                 if (c.attackCounter == 0) {
                     c.attackCounter = c.attackInterval;
+                    beingAttackedCounter = 10;
                     exp -= 1;
                 } else {
                     c.attackCounter--;
@@ -101,17 +115,30 @@ int main(void) {
         } else {
             speed = 5;
         }
+        orientation orient = Down;
+        bool hasKeyPressed = 0;
         if (IsKeyDown(KEY_W)) {
             player_char.pos.y -= speed;
+            orient = Up;
+            hasKeyPressed = 1;
         }
         if (IsKeyDown(KEY_S)) {
             player_char.pos.y += speed;
+            orient = Down;
+            hasKeyPressed = 1;
         }
         if (IsKeyDown(KEY_A)) {
             player_char.pos.x -= speed;
+            orient = Left;
+            hasKeyPressed = 1;
         }
         if (IsKeyDown(KEY_D)) {
             player_char.pos.x += speed;
+            orient = Right;
+            hasKeyPressed = 1;
+        }
+        if(hasKeyPressed){
+            animationCounter++;
         }
         player_char.skill = Skill::Null;
         if (IsKeyDown(KEY_KP_1)) {
@@ -187,10 +214,17 @@ int main(void) {
         camera.zoom += ((float)GetMouseWheelMove() * 0.05f);
 
         BeginMode2D(camera);
-        drawMap(map);
-        drawMobs(mobs);
-        DrawTextureEx(player_text, player_char.pos, 0.f, 1.f, WHITE);
-        for (auto& soccer : soccers) {
+        drawMap(map); //draw map
+        drawMobs(mobs); //draw mobs
+        int numberOfPic = 0;
+        if(hasKeyPressed){
+            numberOfPic = (animationCounter / charaAnimationInterval) % 3;
+        }else{
+            numberOfPic = 0;
+        }
+       if(beingAttackedCounter > 0) beingAttackedCounter--;
+        DrawTextureEx(player_texts[(int(orient)) * 3 + numberOfPic], player_char.pos, 0.f, 1.f, beingAttackedCounter > 0 ? RED : WHITE); //draw player
+        for (auto& soccer : soccers) { //draw soccers
             DrawTextureEx(soccer_text, soccer.pos, 0.f, 1.f, WHITE);
         }
 
@@ -199,8 +233,8 @@ int main(void) {
 
         EndDrawing();
     }
-
-    UnloadTexture(player_text);
+    for(auto& t : player_texts)
+        UnloadTexture(t);
 
     CloseWindow();
     return 0;

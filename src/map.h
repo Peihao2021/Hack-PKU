@@ -18,8 +18,8 @@ const std::vector<std::string> BLOCK_PATH = {
     "assets/front_sea.png", "assets/water.png", "assets/grass.png",
     "assets/sand.png"};
 
-const int WIDTH = 100;
-const int HEIGHT = 100;
+const int WIDTH = 300;
+const int HEIGHT = 300;
 
 class Map {
    public:

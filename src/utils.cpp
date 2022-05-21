@@ -50,7 +50,7 @@ void updateMobPos(std::list<Character>& mobs, Character& player) {
 }
 
 void drawMobs(const std::list<Character>& mobs) {
-    static Texture2D MOB_TEXT = LoadTexture("assets/tiger.png");
+    static Texture2D MOB_TEXT = LoadTexture("assets/ghost/1.png");
     for (auto& c : mobs) {
         // std::cout << "ok" << std::endl;
         DrawTextureEx(MOB_TEXT, c.pos, 0.f, 1.f, WHITE);

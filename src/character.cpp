@@ -7,8 +7,8 @@ Character::Character() {
 }
 
 void Character::updatePos() {
-    pos.x += dir.x * speed / sqrt(dir.x * dir.x + dir.y * dir.y);
-    pos.y += dir.y * speed / sqrt(dir.x * dir.x + dir.y * dir.y);
+    pos.x += dir.x * speed / sqrt(dir.x * dir.x + dir.y * dir.y) + rand() / double(RAND_MAX) * 2 - 1;
+    pos.y += dir.y * speed / sqrt(dir.x * dir.x + dir.y * dir.y) + rand() / double(RAND_MAX) * 2 - 1;
 }
 
 

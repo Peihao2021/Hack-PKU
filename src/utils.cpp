@@ -16,7 +16,7 @@ void drawMap(const Map& map) {
     float x = 0;
     float y = 0;
 
-    float d = WATER_TEXT.width;
+    float d = 31;
 
     for (int i = 0; i < WIDTH; i++) {
         for (int j = 0; j < HEIGHT; j++) {

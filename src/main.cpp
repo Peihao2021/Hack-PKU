@@ -10,9 +10,10 @@
 int main(void) {
     const int screenWidth = 1920;
     const int screenHeight = 1080;
-    const int birth_x = 800;
-    const int birth_y = 500;
-
+    // const int birth_x = 800;
+    // const int birth_y = 500;
+    int marginx = screenWidth / 4;
+    int marginy = screenHeight / 4;
     InitWindow(screenWidth, screenHeight, "HackPKU");
     Texture2D player_text = LoadTexture("assets/player.png");
     Texture2D soccer_text = LoadTexture("assets/soccer.png");
@@ -24,7 +25,10 @@ int main(void) {
     Map map;                          // world map
     Perlin noise(20.00, 4, 100);
     map.initialize(noise);
-    player_char.pos = getBirthPos(map);
+    do {
+        player_char.pos = getBirthPos(map);
+    } while (player_char.pos.x > marginx && player_char.pos.y > marginy
+        && player_char.pos.x < WIDTH * 31 - marginx && player_char.pos.y < HEIGHT * 31 - marginy);
     SetTargetFPS(60);
 
     Camera2D camera;
@@ -38,7 +42,7 @@ int main(void) {
     int exp = 0;
     int difficulty = 0;
     int diffIncreaseInterval = 800;
-    int mobSpwanInterval = 300;
+    int mobSpwanInterval[6] = { 300, 250, 200, 150, 100, 50 };
     size_t maxMobAcount = 200;
     long long frameCounter = 0;
     while (!WindowShouldClose()) {
@@ -47,12 +51,9 @@ int main(void) {
             if (difficulty < 5) {
                 difficulty++;
                 printf("current difficulty: %d\n", difficulty);
-                mobSpwanInterval = mobSpwanInterval >> 1;
             }
         }
-
-        if (characters.size() < maxMobAcount &&
-            frameCounter % mobSpwanInterval == 0) {  // spwan mob
+        if (characters.size() < maxMobAcount && frameCounter % mobSpwanInterval[difficulty] == 0) { // spwan mob
             int randx = rand() % WIDTH;
             int randy = rand() % HEIGHT;
             Character tmp;
@@ -191,23 +192,31 @@ int main(void) {
 
         // printf("TIGER: %f, %f\n", player_char.pos.x, player_char.pos.y);
 
-        if (player_char.pos.x <= birth_x / 2) {
-            player_char.pos.x = birth_x / 2;
-        }
-        if (player_char.pos.y <= birth_y / 2) {
-            player_char.pos.y = birth_y / 2;
-        }
+        // Vector2 lefttopcorner = {0, 0};
+        // Vector2 rightbottomcorner = {WIDTH * 31, HEIGHT * 31};
 
+        if (player_char.pos.x <= marginx) {
+            player_char.pos.x = marginx;
+        }
+        if (player_char.pos.y <= marginy) {
+            player_char.pos.y = marginy;
+        }
+        if (player_char.pos.x >= WIDTH * 31 - marginx) {
+            player_char.pos.x = WIDTH * 31 - marginx;
+        }
+        if (player_char.pos.y >= HEIGHT * 31 - marginy) {
+            player_char.pos.y = HEIGHT * 31 - marginy;
+        }
         BeginDrawing();
 
         ClearBackground(WHITE);
-        camera.target = {player_char.pos.x, player_char.pos.y};
-        if (camera.target.x < birth_x) {
-            camera.target.x = birth_x;
-        }
-        if (camera.target.y < birth_y) {
-            camera.target.y = birth_y;
-        }
+        camera.target = { player_char.pos.x, player_char.pos.y };
+        // if (camera.target.x < birth_x) {
+        //     camera.target.x = birth_x;
+        // }
+        // if (camera.target.y < birth_y) {
+        //     camera.target.y = birth_y;
+        // }
         camera.zoom += ((float)GetMouseWheelMove() * 0.05f);
         // if (camera.zoom < 2.) {
         //     camera.zoom = 2.;
@@ -218,7 +227,7 @@ int main(void) {
         drawCharacters(characters);
         DrawTextureEx(player_text, player_char.pos, 0.f, 1.f, WHITE);
         for (auto& soccer : soccers) {
-            DrawTextureEx(soccer_text, soccer.pos, 0.f, 0.5f, WHITE);
+            DrawTextureEx(soccer_text, soccer.pos, 0.f, 0.3f, WHITE);
         }
 
         EndMode2D();

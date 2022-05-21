@@ -8,8 +8,8 @@ void drawMap(const Map& map) {
         LoadTexture(BLOCK_PATH[(int)BlockType::Water].c_str());
     static Texture2D SEA_TEXT =
         LoadTexture(BLOCK_PATH[(int)BlockType::Sea].c_str());
-    static Texture2D GRASS_TEXT =
-        LoadTexture(BLOCK_PATH[(int)BlockType::Grass].c_str());
+    static Texture2D DIRT_TEXT =
+        LoadTexture(BLOCK_PATH[(int)BlockType::Dirt].c_str());
     static Texture2D SAND_TEXT =
         LoadTexture(BLOCK_PATH[(int)BlockType::Sand].c_str());
 
@@ -29,8 +29,8 @@ void drawMap(const Map& map) {
                 case BlockType::Sea:
                     DrawTextureEx(SEA_TEXT, {x, y}, 0.f, 1.f, WHITE);
                     break;
-                case BlockType::Grass:
-                    DrawTextureEx(GRASS_TEXT, {x, y}, 0.f, 1.f, WHITE);
+                case BlockType::Dirt:
+                    DrawTextureEx(DIRT_TEXT, {x, y}, 0.f, 1.f, WHITE);
                     break;
                 case BlockType::Sand:
                     DrawTextureEx(SAND_TEXT, {x, y}, 0.f, 1.f, WHITE);
@@ -67,13 +67,13 @@ Vector2 getBirthPos(Map& map) {
     do {
         randx = rand() % WIDTH;
         randy = rand() % HEIGHT;
-    } while (map.map[randx][randy] == BlockType::Water || map.map[randx][randy] == BlockType::Sea);
+    } while (map.map[randx][randy] != BlockType::Sand);
     return Vector2{float(randx * 31), float(randy * 31)};
 }
 
 void displayInfo(int exp, int mob_cnt, int difficulty) {
     std::stringstream buffer;
-    buffer << "| Your Exp: " << exp << " | Mob number: " << mob_cnt
+    buffer << "| Your Score: " << exp << " | Mob number: " << mob_cnt
            << " | Difficulty: " << difficulty << " |";
     DrawRectangle(10, 10, 1300, 80, GRAY);
     DrawText(buffer.str().c_str(), 25, 25, 50, WHITE);

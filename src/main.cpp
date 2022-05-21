@@ -37,11 +37,7 @@ int main(void) {
     Map map;                       // world map
     Perlin noise(20.00, 4, 100);
     map.initialize(noise);
-    do {
-        player_char.pos = getBirthPos(map);
-    } while (player_char.pos.x > marginx && player_char.pos.y > marginy &&
-             player_char.pos.x < WIDTH * 31 - marginx &&
-             player_char.pos.y < HEIGHT * 31 - marginy);
+    player_char.pos = getBirthPos(map);
     SetTargetFPS(60);
 
     Camera2D camera;
@@ -58,7 +54,7 @@ int main(void) {
     int charaAnimationInterval = 10;
     int beingAttackedCounter = 0;
     size_t animationCounter = 0;
-    int maxMobAcount = 200;
+    size_t maxMobAcount = 200;
     size_t frameCounter = 0;
     while (!WindowShouldClose()) {
         frameCounter++;
@@ -87,9 +83,9 @@ int main(void) {
                 axis_y <= 0) {
                 c.speed = -c.speed;
             } else if (map.map[axis_x][axis_y] == BlockType::Water || map.map[axis_x][axis_y] == BlockType::Sea) {
-                c.speed = 2;
+                c.speed = 1 + rand() % 2;
             } else {
-                c.speed = 3;
+                c.speed = 2 + rand() % 2;
             }
         }
 
@@ -99,7 +95,7 @@ int main(void) {
                 if (c.attackCounter == 0) {
                     c.attackCounter = c.attackInterval;
                     beingAttackedCounter = 10;
-                    exp -= 1;
+                    exp -= 10;
                 } else {
                     c.attackCounter--;
                 }
@@ -226,7 +222,7 @@ int main(void) {
         DrawTextureEx(player_texts[(int(orient)) * 3 + numberOfPic], player_char.pos, 0.f, 1.f, beingAttackedCounter > 0 ? RED : WHITE); //draw player
         for (auto& soccer : soccers) { //draw soccers
             DrawTextureEx(soccer_text, soccer.pos, 0.f, 1.f, WHITE);
-        }
+        } 
 
         EndMode2D();
         displayInfo(exp, mobs.size(), difficulty);

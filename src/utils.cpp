@@ -1,6 +1,7 @@
 
 #include "utils.h"
 #include <iostream>
+#include <sstream>
 
 void drawMap(const Map& map) {
     static Texture2D WATER_TEXT =
@@ -68,4 +69,11 @@ Vector2 getBirthPos(Map& map) {
         randy = rand() % HEIGHT;
     } while (map.map[randx][randy] == BlockType::Water);
     return Vector2{float(randx * 31), float(randy * 31)};
+}
+
+
+void displayExp(int exp) {
+    std::stringstream buffer;
+    buffer << "Your Exp: " << exp;
+    DrawText(buffer.str().c_str(), 10, 10, 50, DARKGRAY);
 }

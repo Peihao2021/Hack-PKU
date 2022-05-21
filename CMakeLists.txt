@@ -27,8 +27,7 @@ endif()
 
 # Our Project
 
-add_executable(${PROJECT_NAME} 
-  src/common.h
+add_executable(${PROJECT_NAME}
   src/main.cpp
   src/map.h
   src/map.cpp

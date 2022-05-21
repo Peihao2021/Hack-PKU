@@ -1,0 +1,34 @@
+
+adventure_event.png
+size: 272,81
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+alpha
+  rotate: false
+  xy: 147, 2
+  size: 32, 23
+  orig: 32, 23
+  offset: 0, 0
+  index: -1
+btn
+  rotate: true
+  xy: 233, 6
+  size: 73, 37
+  orig: 73, 37
+  offset: 0, 0
+  index: -1
+maze_eventbtn_decorate_d
+  rotate: false
+  xy: 147, 27
+  size: 84, 52
+  orig: 84, 52
+  offset: 0, 0
+  index: -1
+maze_eventbtn_waitbg
+  rotate: false
+  xy: 2, 7
+  size: 143, 72
+  orig: 143, 72
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+novice_dialogue.png
+size: 634,180
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arrow
+  rotate: false
+  xy: 545, 12
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+txt1
+  rotate: false
+  xy: 2, 2
+  size: 541, 34
+  orig: 541, 34
+  offset: 0, 0
+  index: -1
+txt_bg
+  rotate: false
+  xy: 2, 38
+  size: 630, 140
+  orig: 630, 140
+  offset: 0, 0
+  index: -1

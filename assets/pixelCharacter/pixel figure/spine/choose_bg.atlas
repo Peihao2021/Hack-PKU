@@ -1,0 +1,20 @@
+
+choose_bg.png
+size: 264,150
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+herobg
+  rotate: false
+  xy: 150, 36
+  size: 112, 112
+  orig: 112, 112
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 146, 146
+  orig: 146, 146
+  offset: 0, 0
+  index: -1

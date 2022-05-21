@@ -1,0 +1,13 @@
+
+novice_gesture.png
+size: 212,172
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+point
+  rotate: false
+  xy: 2, 2
+  size: 208, 168
+  orig: 208, 168
+  offset: 0, 0
+  index: -1

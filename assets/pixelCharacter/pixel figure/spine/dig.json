@@ -1,0 +1,47 @@
+{
+"skeleton": { "hash": "Qte+SeIZJktDs/acLWNQOuhVFsA", "spine": "2.1.18", "width": 48, "height": 46, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 125.25 }
+],
+"slots": [
+	{ "name": "ore_picks", "bone": "bone", "color": "ffffff00", "attachment": "ore_picks" }
+],
+"skins": {
+	"default": {
+		"ore_picks": {
+			"ore_picks": { "x": -10, "y": 20, "width": 48, "height": 46 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"ore_picks": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": 326,
+						"curve": [ 0.25, 0, 0.971, 0.22 ]
+					},
+					{ "time": 0.3, "angle": 35 },
+					{ "time": 0.3666, "angle": 28.68 },
+					{
+						"time": 0.4333,
+						"angle": 35,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.7, "angle": 326 }
+				]
+			}
+		}
+	}
+}
+}

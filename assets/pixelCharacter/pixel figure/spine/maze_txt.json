@@ -1,0 +1,88 @@
+{
+"skeleton": { "hash": "AiNzqG4A2Yfn5HANWX/XMOYppTA", "spine": "2.1.18", "width": 129.24, "height": 56.56, "images": "././" },
+"bones": [
+	{ "name": "root", "rotation": 0.24, "color": "9c9c9cff" }
+],
+"slots": [
+	{ "name": "txt", "bone": "root", "attachment": "txt" }
+],
+"skins": {
+	"default": {},
+	"txt_alpha": {
+		"txt": {
+			"txt": { "name": "alpha", "width": 62, "height": 68 }
+		}
+	},
+	"txt_exp": {
+		"txt": {
+			"txt": { "name": "exp", "width": 125, "height": 56 }
+		}
+	},
+	"txt_gold": {
+		"txt": {
+			"txt": { "name": "gold", "width": 129, "height": 56 }
+		}
+	},
+	"txt_levelup": {
+		"txt": {
+			"txt": { "name": "lvup", "width": 213, "height": 65 }
+		}
+	},
+	"txt_levelup10": {
+		"txt": {
+			"txt": { "name": "lvup10", "width": 294, "height": 65 }
+		}
+	}
+},
+"animations": {
+	"txt": {
+		"slots": {
+			"txt": {
+				"color": [
+					{
+						"time": 0.7666,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.9, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.1666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.7, "x": 0, "y": 10, "curve": "stepped" },
+					{ "time": 0.7666, "x": 0, "y": 10 },
+					{ "time": 0.9, "x": 0, "y": 51 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 1.638,
+						"y": 0.133,
+						"curve": [ 0.154, 0.1, 0.302, 0.97 ]
+					},
+					{
+						"time": 0.1666,
+						"x": 0.992,
+						"y": 1.1,
+						"curve": [ 0.298, 0.12, 0.681, 0.98 ]
+					},
+					{
+						"time": 0.2333,
+						"x": 0.85,
+						"y": 0.85,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

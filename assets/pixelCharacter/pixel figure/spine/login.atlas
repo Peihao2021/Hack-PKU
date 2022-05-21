@@ -1,0 +1,54 @@
+
+login.png
+size: 925,977
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 2, 2
+  size: 640, 332
+  orig: 640, 332
+  offset: 0, 0
+  index: -1
+main_bg
+  rotate: true
+  xy: 2, 421
+  size: 320, 568
+  orig: 320, 568
+  offset: 0, 0
+  index: -1
+role2
+  rotate: true
+  xy: 579, 336
+  size: 639, 344
+  orig: 639, 344
+  offset: 0, 0
+  index: -1
+txt1
+  rotate: false
+  xy: 2, 743
+  size: 575, 232
+  orig: 575, 232
+  offset: 0, 0
+  index: -1
+
+login2.png
+size: 948,605
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+role
+  rotate: false
+  xy: 2, 2
+  size: 478, 601
+  orig: 478, 601
+  offset: 0, 0
+  index: -1
+ruby
+  rotate: false
+  xy: 482, 117
+  size: 464, 486
+  orig: 464, 486
+  offset: 0, 0
+  index: -1

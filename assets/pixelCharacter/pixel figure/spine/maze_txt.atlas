@@ -1,0 +1,41 @@
+
+maze_txt.png
+size: 194,298
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+alpha
+  rotate: false
+  xy: 69, 13
+  size: 62, 68
+  orig: 62, 68
+  offset: 0, 0
+  index: -1
+exp
+  rotate: true
+  xy: 136, 40
+  size: 125, 56
+  orig: 125, 56
+  offset: 0, 0
+  index: -1
+gold
+  rotate: true
+  xy: 136, 167
+  size: 129, 56
+  orig: 129, 56
+  offset: 0, 0
+  index: -1
+lvup
+  rotate: true
+  xy: 69, 83
+  size: 213, 65
+  orig: 213, 65
+  offset: 0, 0
+  index: -1
+lvup10
+  rotate: true
+  xy: 2, 2
+  size: 294, 65
+  orig: 294, 65
+  offset: 0, 0
+  index: -1

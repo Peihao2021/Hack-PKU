@@ -1,0 +1,20 @@
+
+levelup.png
+size: 438,68
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lvup
+  rotate: false
+  xy: 319, 2
+  size: 117, 64
+  orig: 117, 64
+  offset: 0, 0
+  index: -1
+paperlight
+  rotate: false
+  xy: 2, 2
+  size: 315, 64
+  orig: 315, 64
+  offset: 0, 0
+  index: -1

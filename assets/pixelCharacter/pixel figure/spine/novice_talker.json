@@ -1,0 +1,110 @@
+{
+"skeleton": { "hash": "K/9h8oosxhSDFJh5UuASBCnqZ8Y", "spine": "2.1.18", "width": 234, "height": 93, "images": "././" },
+"bones": [
+	{ "name": "root", "y": 568 },
+	{ "name": "talker", "parent": "root", "x": -195.39, "y": -358.61 }
+],
+"slots": [
+	{ "name": "talker", "bone": "talker", "attachment": "talker" }
+],
+"skins": {
+	"default": {
+		"talker": {
+			"talker": { "width": 234, "height": 93 }
+		}
+	}
+},
+"animations": {
+	"talker_enter": {
+		"slots": {
+			"talker": {
+				"color": [
+					{
+						"time": 0,
+						"color": "00000000",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"talker": {
+				"translate": [
+					{
+						"time": 0,
+						"x": -64.6,
+						"y": -11.38,
+						"curve": [ 0.25, 0, 0.178, 1.4 ]
+					},
+					{ "time": 0.3333, "x": -34.6, "y": -11.38 }
+				],
+				"scale": [
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"talker_exit": {
+		"slots": {
+			"talker": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.2, "color": "00000000" }
+				]
+			}
+		},
+		"bones": {
+			"talker": {
+				"translate": [
+					{
+						"time": 0,
+						"x": -34.6,
+						"y": -11.38,
+						"curve": [ 0.245, -0.52, 0.75, 1 ]
+					},
+					{ "time": 0.2, "x": -14.6, "y": -11.38 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"talker_talk": {
+		"slots": {
+			"talker": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"talker": {
+				"translate": [
+					{ "time": 0, "x": -34.6, "y": -11.38 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.1,
+						"x": 1.2,
+						"y": 1.2,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

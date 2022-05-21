@@ -1,0 +1,27 @@
+
+battle_skill.png
+size: 226,72
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hp
+  rotate: false
+  xy: 162, 2
+  size: 62, 68
+  orig: 62, 68
+  offset: 0, 0
+  index: -1
+skill_name
+  rotate: false
+  xy: 162, 2
+  size: 62, 68
+  orig: 62, 68
+  offset: 0, 0
+  index: -1
+skill_bg
+  rotate: false
+  xy: 2, 12
+  size: 158, 58
+  orig: 158, 58
+  offset: 0, 0
+  index: -1

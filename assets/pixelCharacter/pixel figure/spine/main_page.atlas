@@ -1,0 +1,223 @@
+
+main_page.png
+size: 778,772
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+18000020
+  rotate: false
+  xy: 712, 16
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
+chat1
+  rotate: true
+  xy: 592, 10
+  size: 62, 58
+  orig: 62, 58
+  offset: 0, 0
+  index: -1
+chat2
+  rotate: true
+  xy: 652, 10
+  size: 62, 58
+  orig: 62, 58
+  offset: 0, 0
+  index: -1
+chicken
+  rotate: true
+  xy: 324, 612
+  size: 50, 44
+  orig: 50, 44
+  offset: 0, 0
+  index: -1
+chicken2
+  rotate: true
+  xy: 324, 560
+  size: 50, 44
+  orig: 50, 44
+  offset: 0, 0
+  index: -1
+chicken_fly1
+  rotate: false
+  xy: 370, 643
+  size: 50, 44
+  orig: 50, 44
+  offset: 0, 0
+  index: -1
+chicken_fly2
+  rotate: false
+  xy: 422, 643
+  size: 50, 44
+  orig: 50, 44
+  offset: 0, 0
+  index: -1
+chicken_shadow1
+  rotate: false
+  xy: 99, 7
+  size: 29, 12
+  orig: 29, 12
+  offset: 0, 0
+  index: -1
+chicken_shadow2
+  rotate: false
+  xy: 474, 617
+  size: 46, 45
+  orig: 46, 45
+  offset: 0, 0
+  index: -1
+chicken_walk1
+  rotate: false
+  xy: 528, 314
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk2
+  rotate: false
+  xy: 564, 314
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk3
+  rotate: false
+  xy: 600, 314
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk_hou1
+  rotate: true
+  xy: 370, 581
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk_hou2
+  rotate: true
+  xy: 370, 545
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk_hou3
+  rotate: false
+  xy: 404, 609
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk_qian1
+  rotate: true
+  xy: 440, 607
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk_qian2
+  rotate: false
+  xy: 404, 575
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+chicken_walk_qian3
+  rotate: true
+  xy: 404, 539
+  size: 34, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+cloud
+  rotate: true
+  xy: 2, 10
+  size: 331, 95
+  orig: 331, 95
+  offset: 0, 0
+  index: -1
+deadman_walk1
+  rotate: false
+  xy: 486, 736
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1
+deadman_walk2
+  rotate: false
+  xy: 486, 700
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1
+deadman_walk3
+  rotate: false
+  xy: 486, 664
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1
+floor1
+  rotate: false
+  xy: 2, 343
+  size: 320, 427
+  orig: 320, 427
+  offset: 0, 0
+  index: -1
+floor2
+  rotate: true
+  xy: 99, 21
+  size: 320, 427
+  orig: 320, 427
+  offset: 0, 0
+  index: -1
+house1
+  rotate: true
+  xy: 528, 532
+  size: 238, 243
+  orig: 238, 243
+  offset: 0, 0
+  index: -1
+house2
+  rotate: true
+  xy: 528, 74
+  size: 238, 243
+  orig: 238, 243
+  offset: 0, 0
+  index: -1
+island2
+  rotate: true
+  xy: 646, 314
+  size: 216, 130
+  orig: 216, 130
+  offset: 0, 0
+  index: -1
+land
+  rotate: false
+  xy: 324, 348
+  size: 320, 182
+  orig: 320, 182
+  offset: 0, 0
+  index: -1
+sky
+  rotate: false
+  xy: 324, 689
+  size: 160, 81
+  orig: 160, 81
+  offset: 0, 0
+  index: -1
+sleep
+  rotate: false
+  xy: 528, 2
+  size: 62, 70
+  orig: 62, 70
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 324, 667
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1

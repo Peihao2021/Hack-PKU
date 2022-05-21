@@ -1,0 +1,13 @@
+
+thumbs_up.png
+size: 18,16
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+comment_icon
+  rotate: false
+  xy: 2, 2
+  size: 14, 12
+  orig: 14, 12
+  offset: 0, 0
+  index: -1

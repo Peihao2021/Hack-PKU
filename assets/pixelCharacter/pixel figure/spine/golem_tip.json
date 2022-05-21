@@ -1,0 +1,61 @@
+{
+"skeleton": { "hash": "NFNwvMMAOH8bqA5rPiTqUIaU4PM", "spine": "2.1.18", "width": 4, "height": 4, "images": "././" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "alpha", "bone": "root", "color": "ffffff00", "attachment": "alpha" }
+],
+"skins": {
+	"default": {
+		"alpha": {
+			"alpha": { "width": 4, "height": 4 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"alpha": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.1, "color": "ff3200ff" },
+					{ "time": 0.5333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.1,
+						"angle": 4.8,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.2,
+						"angle": 358.2,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"angle": 3,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.4333,
+						"angle": 358.2,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5333, "angle": 0 }
+				]
+			}
+		}
+	}
+}
+}

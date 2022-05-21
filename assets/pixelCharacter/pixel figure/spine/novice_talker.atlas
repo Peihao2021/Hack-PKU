@@ -1,0 +1,13 @@
+
+novice_talker.png
+size: 238,97
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+talker
+  rotate: false
+  xy: 2, 2
+  size: 234, 93
+  orig: 234, 93
+  offset: 0, 0
+  index: -1

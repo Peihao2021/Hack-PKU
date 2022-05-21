@@ -1,0 +1,295 @@
+{
+"skeleton": { "hash": "FCI3RONu24jjagAioAw/n191m14", "spine": "2.1.18", "width": 108, "height": 99, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "icon", "parent": "root" },
+	{ "name": "lock", "parent": "root" }
+],
+"slots": [
+	{ "name": "tabbg", "bone": "root", "color": "ffffff00", "attachment": "tabbg" },
+	{ "name": "tab_light", "bone": "root", "color": "ffffff00", "attachment": "light2" },
+	{ "name": "light", "bone": "root", "color": "ffffff00", "attachment": "light" },
+	{ "name": "icon", "bone": "icon", "color": "ffffff00", "attachment": "icon" },
+	{ "name": "lock", "bone": "lock", "color": "ffffff00", "attachment": "lock" },
+	{ "name": "name", "bone": "root", "color": "ffffff00", "attachment": "name" },
+	{ "name": "lockname", "bone": "root", "color": "ffffff00", "attachment": "tab_lockname" }
+],
+"skins": {
+	"default": {
+		"light": {
+			"light": { "width": 108, "height": 99 }
+		},
+		"lock": {
+			"lock": { "width": 38, "height": 42 }
+		},
+		"lockname": {
+			"tab_lockname": { "y": -33, "width": 66, "height": 29 }
+		},
+		"tab_light": {
+			"light2": { "width": 106, "height": 99 }
+		},
+		"tabbg": {
+			"tabbg": { "width": 108, "height": 99 }
+		}
+	},
+	"tab1": {
+		"icon": {
+			"icon": { "name": "tab1_world", "width": 106, "height": 99 }
+		},
+		"name": {
+			"name": { "name": "tab1_name", "y": -33, "width": 66, "height": 29 }
+		}
+	},
+	"tab2": {
+		"icon": {
+			"icon": { "name": "tab2_maze", "width": 106, "height": 99 }
+		},
+		"name": {
+			"name": { "name": "tab2_name", "y": -33, "width": 66, "height": 29 }
+		}
+	},
+	"tab3": {
+		"icon": {
+			"icon": { "name": "tab3_mining", "width": 106, "height": 99 }
+		},
+		"name": {
+			"name": { "name": "tab3_name", "y": -33, "width": 66, "height": 29 }
+		}
+	},
+	"tab4": {
+		"icon": {
+			"icon": { "name": "tab5_pvp", "width": 106, "height": 99 }
+		},
+		"name": {
+			"name": { "name": "tab4_name", "y": -33, "width": 66, "height": 29 }
+		}
+	},
+	"tab5": {
+		"icon": {
+			"icon": { "name": "tab4_recruit", "width": 106, "height": 99 }
+		},
+		"name": {
+			"name": { "name": "tab5_name", "y": -33, "width": 66, "height": 29 }
+		}
+	},
+	"tab6": {
+		"icon": {
+			"icon": { "name": "tab6_mercenary", "width": 106, "height": 99 }
+		},
+		"name": {
+			"name": { "name": "tab6_name", "y": -33, "width": 66, "height": 29 }
+		}
+	}
+},
+"animations": {
+	"enter": {
+		"slots": {
+			"icon": {
+				"color": [
+					{ "time": 0, "color": "ebebebff" },
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			},
+			"lock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffff00" }
+				]
+			},
+			"lockname": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"name": {
+				"color": [
+					{ "time": 0, "color": "b4b4b4ff" },
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			},
+			"tab_light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.0666, "color": "ffffffff" },
+					{ "time": 0.2, "color": "ffffff00" }
+				]
+			},
+			"tabbg": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"icon": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.114, 0.69, 0.75, 1 ]
+					},
+					{ "time": 0.2, "x": 0, "y": 10 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.114, 1, 0.75, 1 ]
+					},
+					{
+						"time": 0.0333,
+						"x": 0.8,
+						"y": 0.8,
+						"curve": [ 0.114, 1, 0.75, 1 ]
+					},
+					{ "time": 0.2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"exit": {
+		"slots": {
+			"icon": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.2, "color": "ebebebff" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.1, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffff00" }
+				]
+			},
+			"lock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"lockname": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"name": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.2, "color": "b4b4b4ff" }
+				]
+			},
+			"tab_light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tabbg": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"icon": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 10,
+						"curve": [ 0.114, 0.69, 0.75, 1 ]
+					},
+					{ "time": 0.2, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"lock": {
+		"slots": {
+			"icon": {
+				"color": [
+					{ "time": 0, "color": "494949ff" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"lock": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"lockname": {
+				"color": [
+					{ "time": 0, "color": "b4b4b4ff" }
+				]
+			},
+			"name": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tab_light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tabbg": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		}
+	},
+	"normal": {
+		"slots": {
+			"icon": {
+				"color": [
+					{ "time": 0, "color": "ebebebff" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"lock": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"lockname": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"name": {
+				"color": [
+					{ "time": 0, "color": "b4b4b4ff" }
+				]
+			},
+			"tab_light": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tabbg": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		}
+	}
+}
+}

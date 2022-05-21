@@ -1,0 +1,62 @@
+
+recruit_start_n_end.png
+size: 371,187
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+herolist_bg5
+  rotate: false
+  xy: 2, 3
+  size: 69, 69
+  orig: 69, 69
+  offset: 0, 0
+  index: -1
+juanzhou1
+  rotate: true
+  xy: 104, 91
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+juanzhou2
+  rotate: false
+  xy: 137, 2
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+juanzhou3
+  rotate: true
+  xy: 193, 91
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+juanzhou4
+  rotate: false
+  xy: 233, 2
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+juanzhou5
+  rotate: true
+  xy: 282, 91
+  size: 94, 87
+  orig: 94, 87
+  offset: 0, 0
+  index: -1
+light2
+  rotate: false
+  xy: 2, 74
+  size: 100, 111
+  orig: 100, 111
+  offset: 0, 0
+  index: -1
+role
+  rotate: false
+  xy: 73, 4
+  size: 62, 68
+  orig: 62, 68
+  offset: 0, 0
+  index: -1

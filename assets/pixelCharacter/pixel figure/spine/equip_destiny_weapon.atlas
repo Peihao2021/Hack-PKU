@@ -1,0 +1,27 @@
+
+equip_destiny_weapon.png
+size: 480,104
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+left
+  rotate: false
+  xy: 187, 18
+  size: 178, 84
+  orig: 178, 84
+  offset: 0, 0
+  index: -1
+light2
+  rotate: true
+  xy: 367, 2
+  size: 100, 111
+  orig: 100, 111
+  offset: 0, 0
+  index: -1
+right
+  rotate: false
+  xy: 2, 16
+  size: 183, 86
+  orig: 183, 86
+  offset: 0, 0
+  index: -1

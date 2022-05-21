@@ -1,0 +1,80 @@
+{
+"skeleton": { "hash": "XqNNgVi/oCJTPLcUiN0CjuG8Mq0", "spine": "2.1.18", "width": 630, "height": 128, "images": "././" },
+"bones": [
+	{ "name": "root", "x": 238, "y": -36 },
+	{ "name": "paperlight", "parent": "root" },
+	{ "name": "skin", "parent": "root", "x": -200, "y": 20 }
+],
+"slots": [
+	{ "name": "paperlight", "bone": "paperlight", "attachment": "paperlight" },
+	{ "name": "skin", "bone": "skin", "attachment": "lvup" }
+],
+"skins": {
+	"default": {
+		"paperlight": {
+			"paperlight": { "scaleX": 2, "scaleY": 2, "width": 315, "height": 64 }
+		},
+		"skin": {
+			"lvup": { "width": 117, "height": 64 }
+		}
+	}
+},
+"animations": {
+	"levelup": {
+		"slots": {
+			"paperlight": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"skin": {
+				"color": [
+					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 0.2333,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3666, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"skin": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.169, 0.62, 0.398, 0.99 ]
+					},
+					{
+						"time": 0.2333,
+						"x": 0,
+						"y": 30,
+						"curve": [ 0.894, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3666, "x": 0, "y": 60 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"paperlight": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

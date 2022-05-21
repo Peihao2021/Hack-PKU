@@ -1,0 +1,230 @@
+{
+"skeleton": { "hash": "VeGiHlRDy0EPYfd/7Fv22CDPRoc", "spine": "2.1.18", "width": 200.08, "height": 222.07, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "light2", "parent": "root", "length": 174.8, "x": -0.9, "y": -2.28, "rotation": 178.64 },
+	{ "name": "reel2", "parent": "root", "length": 366.02 },
+	{ "name": "rolebg", "parent": "root", "length": 133.49, "rotation": -90 },
+	{ "name": "roleinfo2", "parent": "root", "length": 100.94, "scaleX": 2, "scaleY": 2, "rotation": 90 }
+],
+"slots": [
+	{ "name": "recruit1", "bone": "reel2", "attachment": "recruit1" },
+	{ "name": "light2", "bone": "light2", "color": "ffffff00", "attachment": "light2" },
+	{ "name": "herolist_bg5", "bone": "rolebg", "color": "ffffff00", "attachment": "herolist_bg5" },
+	{ "name": "role2", "bone": "roleinfo2", "color": "ffffff00", "attachment": "role" }
+],
+"skins": {
+	"default": {
+		"herolist_bg5": {
+			"herolist_bg5": { "scaleX": 2, "scaleY": 2, "rotation": 90, "width": 69, "height": 69 }
+		},
+		"light2": {
+			"light2": { "x": -5.82, "y": -9.19, "scaleX": 2, "scaleY": 2, "rotation": -178.64, "width": 100, "height": 111 }
+		},
+		"role2": {
+			"role": { "rotation": -90, "width": 62, "height": 68 }
+		}
+	},
+	"reel1": {
+		"recruit1": {
+			"recruit1": { "name": "juanzhou1", "width": 94, "height": 87 }
+		}
+	},
+	"reel2": {
+		"recruit1": {
+			"recruit1": { "name": "juanzhou2", "width": 94, "height": 87 }
+		}
+	},
+	"reel3": {
+		"recruit1": {
+			"recruit1": { "name": "juanzhou3", "width": 94, "height": 87 }
+		}
+	},
+	"reel4": {
+		"recruit1": {
+			"recruit1": { "name": "juanzhou4", "width": 94, "height": 87 }
+		}
+	},
+	"reel5": {
+		"recruit1": {
+			"recruit1": { "name": "juanzhou5", "width": 94, "height": 87 }
+		}
+	}
+},
+"animations": {
+	"end": {
+		"slots": {
+			"herolist_bg5": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.1333,
+						"color": "ffffff00",
+						"curve": [ 0.919, 0.02, 0.75, 1 ]
+					},
+					{ "time": 0.4666, "color": "ffffffff" }
+				]
+			},
+			"light2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.5,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.7333, "color": "ffffff00" }
+				]
+			},
+			"recruit1": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3, "color": "ffffff00" }
+				]
+			},
+			"role2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.3666,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.104, 1 ]
+					},
+					{ "time": 0.7, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"reel2": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.135, 0, 0, 1 ]
+					},
+					{ "time": 0.3, "x": 2, "y": 2 }
+				]
+			},
+			"rolebg": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.5, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.111, 0, 0, 1 ]
+					},
+					{
+						"time": 0.2333,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.943, 0, 0.784, 1 ]
+					},
+					{
+						"time": 0.5,
+						"x": 0.9,
+						"y": 0.9,
+						"curve": [ 0.503, 0, 0.883, 0.61 ]
+					},
+					{ "time": 0.5666, "x": 1, "y": 1 }
+				]
+			},
+			"roleinfo2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.5, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.111, 0, 0, 1 ]
+					},
+					{
+						"time": 0.2333,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.943, 0, 0.784, 1 ]
+					},
+					{ "time": 0.5, "x": 0.9, "y": 0.9 },
+					{ "time": 0.6, "x": 1, "y": 1 }
+				]
+			},
+			"light2": {
+				"scale": [
+					{
+						"time": 0.5,
+						"x": 0.5,
+						"y": 0.5,
+						"curve": [ 0.068, 0, 0, 0.96 ]
+					},
+					{ "time": 0.6, "x": 1.2, "y": 1.2 }
+				]
+			}
+		}
+	},
+	"start": {
+		"slots": {
+			"herolist_bg5": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"light2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"recruit1": {
+				"color": [
+					{ "time": 0, "color": "000000ff", "curve": "stepped" },
+					{
+						"time": 0.0666,
+						"color": "000000ff",
+						"curve": [ 0.364, 0, 0.622, 1 ]
+					},
+					{ "time": 0.3666, "color": "ffffffff" }
+				]
+			},
+			"role2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"reel2": {
+				"rotate": [
+					{ "time": 0.9, "angle": 0 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 0.259,
+						"y": 0.259,
+						"curve": [ 0.25, 0, 0, 1 ]
+					},
+					{
+						"time": 0.2666,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.25, 0, 0.395, 1.49 ]
+					},
+					{ "time": 0.4666, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

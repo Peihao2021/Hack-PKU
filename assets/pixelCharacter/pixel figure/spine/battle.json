@@ -1,0 +1,945 @@
+{
+"skeleton": { "hash": "IQZCXneRiFAsn224Fcn5h6+e9Og", "spine": "2.1.18", "width": 640, "height": 1152, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "exit", "parent": "root", "y": -449.08 },
+	{ "name": "shadow", "parent": "root", "length": 449.67 },
+	{ "name": "specialreward_array", "parent": "root", "length": 234.76, "y": -40 },
+	{ "name": "specialreward_array2", "parent": "root", "length": 234.76, "y": -40, "color": "9b9b9b53" },
+	{ "name": "txt", "parent": "root", "length": 280.99, "y": 10 },
+	{ "name": "txt2", "parent": "root", "length": 280.99, "y": 10, "color": "9b9b9b53" },
+	{ "name": "zong", "parent": "root" },
+	{ "name": "decorate_ore", "parent": "zong", "length": 312.02, "x": 123.9, "y": -95.68, "rotation": 136.27 },
+	{ "name": "decorate_sword", "parent": "zong", "length": 312.02, "x": -96.09, "y": -95.68, "rotation": 42.65 },
+	{ "name": "fail", "parent": "zong", "x": 100 },
+	{ "name": "tip1", "parent": "zong", "x": -3, "y": -173 },
+	{ "name": "tip2", "parent": "zong", "x": -6, "y": -172 },
+	{ "name": "tip3", "parent": "zong", "y": -174 },
+	{ "name": "victory", "parent": "zong" }
+],
+"slots": [
+	{ "name": "secondbox_shade_f", "bone": "shadow", "color": "ffffff00", "attachment": "secondbox_shade_f" },
+	{ "name": "specialreward_array2", "bone": "specialreward_array2", "color": "ffffff00", "attachment": "specialreward_array" },
+	{ "name": "specialreward_array", "bone": "specialreward_array", "color": "ffffff00", "attachment": "specialreward_array" },
+	{ "name": "txt2", "bone": "txt2", "color": "ffffff00", "attachment": "txt" },
+	{ "name": "txt", "bone": "txt", "color": "ffffff00", "attachment": "txt" },
+	{ "name": "black", "bone": "root", "color": "ffffff00", "attachment": "black" },
+	{ "name": "specialreward_array_2", "bone": "decorate_ore", "color": "ffffff00", "attachment": "specialreward_array_2" },
+	{ "name": "specialreward_array3", "bone": "decorate_sword", "color": "ffffff00", "attachment": "specialreward_array" },
+	{ "name": "vitory", "bone": "victory", "color": "ffffff00", "attachment": "vitory" },
+	{ "name": "fail", "bone": "fail", "color": "ffffff00", "attachment": "fail" },
+	{ "name": "exit", "bone": "exit", "color": "ffffff00", "attachment": "exit" },
+	{ "name": "tip1", "bone": "tip1", "color": "ffffff00", "attachment": "tip1" },
+	{ "name": "tip2", "bone": "tip2", "color": "ffffff00", "attachment": "tip2" },
+	{ "name": "tip3", "bone": "tip3", "color": "ffffff00", "attachment": "tip3" }
+],
+"skins": {
+	"default": {
+		"black": {
+			"black": { "scaleX": 32, "scaleY": 32, "width": 20, "height": 36 }
+		},
+		"exit": {
+			"exit": { "width": 166, "height": 28 }
+		},
+		"fail": {
+			"fail": { "x": -90, "scaleX": 8, "scaleY": 8, "width": 60, "height": 19 }
+		},
+		"secondbox_shade_f": {
+			"secondbox_shade_f": { "scaleX": 16, "scaleY": 16, "width": 40, "height": 71 }
+		},
+		"specialreward_array": {
+			"specialreward_array": { "x": 20, "scaleX": 2, "scaleY": 2, "width": 223, "height": 87 }
+		},
+		"specialreward_array2": {
+			"specialreward_array": { "x": 20, "scaleX": 2, "scaleY": 2, "width": 223, "height": 87 }
+		},
+		"specialreward_array3": {
+			"specialreward_array": { "x": 124.82, "y": -2.83, "scaleX": 2, "scaleY": 2, "rotation": 178.88, "width": 223, "height": 87 }
+		},
+		"specialreward_array_2": {
+			"specialreward_array_2": { "x": 170.69, "y": 16.26, "scaleX": 3, "scaleY": 3, "rotation": -137.34, "width": 138, "height": 132 }
+		},
+		"tip1": {
+			"tip1": { "width": 401, "height": 76 }
+		},
+		"tip2": {
+			"tip2": { "width": 406, "height": 77 }
+		},
+		"tip3": {
+			"tip3": { "width": 393, "height": 76 }
+		},
+		"txt": {
+			"txt": { "scaleX": 8, "scaleY": 8, "width": 33, "height": 19 }
+		},
+		"txt2": {
+			"txt": { "scaleX": 8, "scaleY": 8, "width": 33, "height": 19 }
+		},
+		"vitory": {
+			"vitory": { "scaleX": 8, "scaleY": 8, "width": 60, "height": 19 }
+		}
+	}
+},
+"animations": {
+	"lose": {
+		"slots": {
+			"black": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.2666, "color": "ffffff7e" }
+				]
+			},
+			"exit": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.3666,
+						"color": "ffffffff",
+						"curve": [ 0.575, 0, 0.75, 1 ]
+					},
+					{ "time": 1.7, "color": "ffffff00" }
+				]
+			},
+			"fail": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3333, "color": "ffffffff" }
+				]
+			},
+			"secondbox_shade_f": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.2666, "color": "ffffff7e" }
+				]
+			},
+			"specialreward_array": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array_2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip1": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3333, "color": "ffffffff" }
+				]
+			},
+			"tip2": {
+				"color": [
+					{
+						"time": 0.0666,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.4, "color": "ffffffff" }
+				]
+			},
+			"tip3": {
+				"color": [
+					{
+						"time": 0.1333,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.4666, "color": "ffffffff" }
+				]
+			},
+			"txt": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"txt2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"vitory": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"fail": {
+				"rotate": [
+					{
+						"time": 0.7333,
+						"angle": 0,
+						"curve": [ 0.297, 0, 0.907, 0.46 ]
+					},
+					{
+						"time": 0.9,
+						"angle": 6.06,
+						"curve": [ 0.101, 0.72, 0.577, 1 ]
+					},
+					{
+						"time": 0.9666,
+						"angle": 1.67,
+						"curve": [ 0.355, 0, 0.855, 0.38 ]
+					},
+					{ "time": 1.0333, "angle": 6.06 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0, 0.73, 0.089, 1.23 ]
+					},
+					{ "time": 0.3333, "x": 0, "y": 200 }
+				]
+			},
+			"tip1": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 220,
+						"curve": [ 0, 0.73, 0.089, 1.23 ]
+					},
+					{ "time": 0.3333, "x": 0, "y": 150 }
+				]
+			},
+			"tip2": {
+				"translate": [
+					{
+						"time": 0.0666,
+						"x": 0,
+						"y": 220,
+						"curve": [ 0, 0.73, 0.089, 1.23 ]
+					},
+					{ "time": 0.4, "x": 0, "y": 60 }
+				]
+			},
+			"tip3": {
+				"translate": [
+					{
+						"time": 0.1333,
+						"x": 0,
+						"y": 220,
+						"curve": [ 0, 0.73, 0.089, 1.23 ]
+					},
+					{ "time": 0.4666, "x": 0, "y": -26 }
+				]
+			}
+		}
+	},
+	"lose_end": {
+		"slots": {
+			"black": {
+				"color": [
+					{ "time": 0, "color": "ffffff7e" }
+				]
+			},
+			"exit": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.3666,
+						"color": "ffffffff",
+						"curve": [ 0.575, 0, 0.75, 1 ]
+					},
+					{ "time": 0.7, "color": "ffffff00" }
+				]
+			},
+			"fail": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"secondbox_shade_f": {
+				"color": [
+					{ "time": 0, "color": "ffffff7e" }
+				]
+			},
+			"specialreward_array": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array_2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip1": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"tip2": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"tip3": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"txt": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"txt2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"vitory": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"fail": {
+				"rotate": [
+					{ "time": 0, "angle": 6.06 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 200 }
+				]
+			},
+			"tip1": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 150 }
+				]
+			},
+			"tip2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 60 }
+				]
+			},
+			"tip3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -26 }
+				]
+			}
+		}
+	},
+	"start": {
+		"slots": {
+			"black": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5666, "color": "ffffff00" }
+				]
+			},
+			"exit": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"fail": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"secondbox_shade_f": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.214, 1 ]
+					},
+					{ "time": 0.4666, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.3333,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.324, 1 ]
+					},
+					{ "time": 1.6, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.3666,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.166, 1 ]
+					},
+					{ "time": 0.5666, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1.3, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.4333,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.166, 1 ]
+					},
+					{ "time": 0.6333, "color": "ffffff53", "curve": "stepped" },
+					{
+						"time": 1.2,
+						"color": "ffffff53",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1.3666, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array_2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip1": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"txt": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.3666,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0, 1 ]
+					},
+					{ "time": 0.5666, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 1.1333,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1.3, "color": "ffffff00" }
+				]
+			},
+			"txt2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.4333,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0, 1 ]
+					},
+					{ "time": 0.6333, "color": "ffffff5d" },
+					{
+						"time": 1.2,
+						"color": "ffffff51",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1.3666, "color": "ffffff00" }
+				]
+			},
+			"vitory": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"txt": {
+				"translate": [
+					{
+						"time": 0.3666,
+						"x": -400,
+						"y": 0,
+						"curve": [ 0.594, 0, 0.376, 1 ]
+					},
+					{
+						"time": 0.5666,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.1333,
+						"x": 10,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.419, 1 ]
+					},
+					{ "time": 1.3, "x": 250, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0.3666,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.498, 0, 0.333, 1 ]
+					},
+					{ "time": 0.5666, "x": 1, "y": 1 }
+				]
+			},
+			"specialreward_array": {
+				"translate": [
+					{
+						"time": 0.3666,
+						"x": 400,
+						"y": 0,
+						"curve": [ 0.594, 0, 0.376, 1 ]
+					},
+					{
+						"time": 0.5666,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.1333,
+						"x": -10,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.419, 1 ]
+					},
+					{ "time": 1.3, "x": -240, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0.3666,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.498, 0, 0.333, 1 ]
+					},
+					{ "time": 0.5666, "x": 1, "y": 1 }
+				]
+			},
+			"txt2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{
+						"time": 0.4333,
+						"x": -400,
+						"y": 0,
+						"curve": [ 0.594, 0, 0.376, 1 ]
+					},
+					{
+						"time": 0.6333,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.2,
+						"x": 10,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.419, 1 ]
+					},
+					{ "time": 1.3666, "x": 250, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0.4333,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.498, 0, 0.333, 1 ]
+					},
+					{ "time": 0.6333, "x": 1, "y": 1 }
+				]
+			},
+			"specialreward_array2": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.4333,
+						"x": 400,
+						"y": 0,
+						"curve": [ 0.594, 0, 0.376, 1 ]
+					},
+					{
+						"time": 0.6333,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.2,
+						"x": -10,
+						"y": 0,
+						"curve": [ 0.25, 0, 0.419, 1 ]
+					},
+					{ "time": 1.3666, "x": -240, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0.4333,
+						"x": 2,
+						"y": 2,
+						"curve": [ 0.498, 0, 0.333, 1 ]
+					},
+					{ "time": 0.6333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"win": {
+		"slots": {
+			"black": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.2666, "color": "ffffff7e" }
+				]
+			},
+			"exit": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 1,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 1.3666,
+						"color": "ffffffff",
+						"curve": [ 0.575, 0, 0.75, 1 ]
+					},
+					{ "time": 1.7, "color": "ffffff00" }
+				]
+			},
+			"fail": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"secondbox_shade_f": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.2666, "color": "ffffff7e" }
+				]
+			},
+			"specialreward_array": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array3": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.1, "color": "ffffffff" }
+				]
+			},
+			"specialreward_array_2": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.1, "color": "ffffffff" }
+				]
+			},
+			"tip1": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"txt": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"txt2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"vitory": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.5,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.5666, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"decorate_sword": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": 118.39,
+						"curve": [ 0.814, 0.02, 0.845, 0.32 ]
+					},
+					{
+						"time": 0.3333,
+						"angle": -9.07,
+						"curve": [ 0.173, 0.42, 0.75, 1 ]
+					},
+					{ "time": 0.4, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": -160,
+						"y": 100,
+						"curve": [ 0.651, 0, 0.883, 0.25 ]
+					},
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.4, "x": 0, "y": 0 }
+				]
+			},
+			"decorate_ore": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": -114.39,
+						"curve": [ 0.814, 0.02, 0.845, 0.32 ]
+					},
+					{
+						"time": 0.3333,
+						"angle": 9.21,
+						"curve": [ 0.173, 0.42, 0.75, 1 ]
+					},
+					{ "time": 0.4, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 160,
+						"y": 100,
+						"curve": [ 0.25, 0, 0.883, 0.25 ]
+					},
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.4, "x": 0, "y": 0 }
+				]
+			},
+			"victory": {
+				"scale": [
+					{ "time": 0, "x": 0.1, "y": 0.1, "curve": "stepped" },
+					{
+						"time": 0.5,
+						"x": 5,
+						"y": 5,
+						"curve": [ 0.516, 0.55, 0.363, 1.27 ]
+					},
+					{ "time": 0.7, "x": 1, "y": 1 }
+				]
+			},
+			"zong": {
+				"translate": [
+					{ "time": 0.6, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6333, "x": 10, "y": 0 },
+					{ "time": 0.6666, "x": 10, "y": 10 },
+					{ "time": 0.7, "x": 0, "y": 8 },
+					{ "time": 0.7333, "x": -8, "y": 8 },
+					{ "time": 0.7666, "x": -6, "y": 0 },
+					{ "time": 0.8, "x": -6, "y": -6 },
+					{ "time": 0.8333, "x": 0, "y": -4 },
+					{ "time": 0.8666, "x": 4, "y": -4 },
+					{ "time": 0.9, "x": 2, "y": 0 },
+					{ "time": 0.9333, "x": 2, "y": 2 },
+					{ "time": 0.9666, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"win_end": {
+		"slots": {
+			"black": {
+				"color": [
+					{ "time": 0, "color": "ffffff7e" }
+				]
+			},
+			"exit": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.3666,
+						"color": "ffffffff",
+						"curve": [ 0.575, 0, 0.75, 1 ]
+					},
+					{ "time": 0.7, "color": "ffffff00" }
+				]
+			},
+			"fail": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"secondbox_shade_f": {
+				"color": [
+					{ "time": 0, "color": "ffffff7e" }
+				]
+			},
+			"specialreward_array": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"specialreward_array3": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"specialreward_array_2": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"tip1": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"tip3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"txt": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"txt2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"vitory": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"decorate_sword": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"decorate_ore": {
+				"rotate": [
+					{ "time": 0, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"victory": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

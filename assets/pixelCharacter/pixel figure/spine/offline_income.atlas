@@ -1,0 +1,34 @@
+
+offline_income.png
+size: 289,204
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coin_header
+  rotate: false
+  xy: 225, 100
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+exp
+  rotate: false
+  xy: 225, 66
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+light2
+  rotate: true
+  xy: 2, 2
+  size: 200, 221
+  orig: 200, 221
+  offset: 0, 0
+  index: -1
+txt
+  rotate: false
+  xy: 225, 134
+  size: 62, 68
+  orig: 62, 68
+  offset: 0, 0
+  index: -1

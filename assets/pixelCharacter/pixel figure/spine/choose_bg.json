@@ -1,0 +1,77 @@
+{
+"skeleton": { "hash": "sX6svW/RCutIyFnTArgglZWiMLk", "spine": "2.1.18", "width": 146, "height": 146, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "herobg", "parent": "root" }
+],
+"slots": [
+	{ "name": "shadow", "bone": "herobg", "attachment": "shadow" },
+	{ "name": "herobg", "bone": "herobg", "attachment": "herobg" }
+],
+"skins": {
+	"default": {
+		"herobg": {
+			"herobg": { "width": 112, "height": 112 }
+		},
+		"shadow": {
+			"shadow": { "width": 146, "height": 146 }
+		}
+	}
+},
+"animations": {
+	"choose": {
+		"slots": {
+			"shadow": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.1333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.196, 0.59, 0.714, 1.58 ]
+					},
+					{ "time": 0.1666, "x": 1.16, "y": 1.16 }
+				]
+			}
+		}
+	},
+	"unchosen": {
+		"slots": {
+			"shadow": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.1333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1.16,
+						"y": 1.16,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.1333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

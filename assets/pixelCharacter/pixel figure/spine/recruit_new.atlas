@@ -1,0 +1,62 @@
+
+recruit_new.png
+size: 472,209
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bing
+  rotate: false
+  xy: 400, 146
+  size: 70, 61
+  orig: 70, 61
+  offset: 0, 0
+  index: -1
+ji
+  rotate: false
+  xy: 225, 4
+  size: 70, 61
+  orig: 70, 61
+  offset: 0, 0
+  index: -1
+king
+  rotate: false
+  xy: 225, 127
+  size: 173, 80
+  orig: 173, 80
+  offset: 0, 0
+  index: -1
+light2
+  rotate: true
+  xy: 2, 7
+  size: 200, 221
+  orig: 200, 221
+  offset: 0, 0
+  index: -1
+ling
+  rotate: false
+  xy: 333, 64
+  size: 70, 61
+  orig: 70, 61
+  offset: 0, 0
+  index: -1
+new
+  rotate: false
+  xy: 225, 67
+  size: 106, 58
+  orig: 106, 58
+  offset: 0, 0
+  index: -1
+se
+  rotate: true
+  xy: 405, 74
+  size: 70, 61
+  orig: 70, 61
+  offset: 0, 0
+  index: -1
+xiu
+  rotate: true
+  xy: 405, 2
+  size: 70, 61
+  orig: 70, 61
+  offset: 0, 0
+  index: -1

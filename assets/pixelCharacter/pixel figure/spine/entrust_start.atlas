@@ -1,0 +1,27 @@
+
+entrust_start.png
+size: 806,78
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box_n_detail_bg
+  rotate: false
+  xy: 2, 9
+  size: 32, 33
+  orig: 32, 33
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 2, 44
+  size: 32, 595
+  orig: 32, 595
+  offset: 0, 0
+  index: -1
+start_txt
+  rotate: false
+  xy: 599, 2
+  size: 205, 74
+  orig: 205, 74
+  offset: 0, 0
+  index: -1

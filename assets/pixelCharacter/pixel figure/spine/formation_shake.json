@@ -1,0 +1,74 @@
+{
+"skeleton": { "hash": "URkQb0lpVWrA+Xd8jBRZoJncBwc", "spine": "2.1.18", "width": 74, "height": 74, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" }
+],
+"slots": [
+	{ "name": "herolist_bg5", "bone": "bone", "attachment": "herolist_bg5" }
+],
+"skins": {
+	"default": {
+		"herolist_bg5": {
+			"herolist_bg5": { "width": 74, "height": 74 }
+		}
+	}
+},
+"animations": {
+	"shake1": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0.89 },
+					{ "time": 0.1333, "angle": -1.03 },
+					{ "time": 0.2666, "angle": 0.89 },
+					{ "time": 0.4, "angle": -1.03 },
+					{ "time": 0.5333, "angle": 0.89 }
+				]
+			}
+		}
+	},
+	"shake2": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": -0.07 },
+					{ "time": 0.0666, "angle": 0.89 },
+					{ "time": 0.2, "angle": -1.03 },
+					{ "time": 0.3333, "angle": 0.89 },
+					{ "time": 0.4666, "angle": -1.03 },
+					{ "time": 0.5333, "angle": -0.07 }
+				]
+			}
+		}
+	},
+	"shake3": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0.41 },
+					{ "time": 0.0333, "angle": 0.89 },
+					{ "time": 0.1666, "angle": -1.03 },
+					{ "time": 0.3, "angle": 0.89 },
+					{ "time": 0.4333, "angle": -1.03 },
+					{ "time": 0.5333, "angle": 0.41 }
+				]
+			}
+		}
+	},
+	"shake4": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": -0.55 },
+					{ "time": 0.1, "angle": 0.89 },
+					{ "time": 0.2333, "angle": -1.03 },
+					{ "time": 0.3666, "angle": 0.89 },
+					{ "time": 0.5, "angle": -1.03 },
+					{ "time": 0.5333, "angle": -0.55 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,199 @@
+{
+"skeleton": { "hash": "3MttJD0H32ElBP2/FE7TYz/1Pgk", "spine": "2.1.18", "width": 316, "height": 116, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 196.91 },
+	{ "name": "hp", "parent": "root", "length": 208.87 }
+],
+"slots": [
+	{ "name": "skill_bg", "bone": "bone", "attachment": "skill_bg" },
+	{ "name": "skill_name", "bone": "bone", "attachment": "skill_name" },
+	{ "name": "hp", "bone": "hp", "attachment": "hp" }
+],
+"skins": {
+	"default": {
+		"hp": {
+			"hp": { "width": 62, "height": 68 }
+		},
+		"skill_bg": {
+			"skill_bg": { "scaleX": 2, "scaleY": 2, "width": 158, "height": 58 }
+		},
+		"skill_name": {
+			"skill_name": { "x": -18, "y": -3, "rotation": 5.57, "width": 62, "height": 68 }
+		}
+	}
+},
+"animations": {
+	"hp": {
+		"slots": {
+			"hp": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.2,
+						"color": "ffffffff",
+						"curve": [ 1, 0, 1, 0.77 ]
+					},
+					{ "time": 1.0666, "color": "ffffff00" }
+				]
+			},
+			"skill_bg": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"skill_name": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"hp": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{
+						"time": 0.2,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.986, 0, 1, 0.4 ]
+					},
+					{ "time": 1.0666, "x": 0, "y": 50 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 0.1, "curve": "stepped" },
+					{
+						"time": 0.2,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.25, 0, 0.027, 1 ]
+					},
+					{
+						"time": 0.2666,
+						"x": 1,
+						"y": 5,
+						"curve": [ 0.25, 0, 0.027, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 2,
+						"y": 0.5,
+						"curve": [ 0.25, 0, 0.104, 1.83 ]
+					},
+					{ "time": 0.4, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"left": {
+		"slots": {
+			"hp": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"skill_bg": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0, 1 ]
+					},
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			},
+			"skill_name": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0, 1 ]
+					},
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.8666, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": -320.92,
+						"y": -61.12,
+						"curve": [ 0.25, 0, 0.228, 1.51 ]
+					},
+					{ "time": 0.2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 2.301,
+						"y": 2.301,
+						"curve": [ 0.25, 0, 0.132, 1.43 ]
+					},
+					{ "time": 0.2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"right": {
+		"slots": {
+			"hp": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"skill_bg": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0, 1 ]
+					},
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			},
+			"skill_name": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0, 1 ]
+					},
+					{ "time": 0.2, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 349, "curve": "stepped" },
+					{ "time": 0.8666, "angle": 349 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 320.92,
+						"y": -61.12,
+						"curve": [ 0.25, 0, 0.228, 1.51 ]
+					},
+					{ "time": 0.2, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{
+						"time": 0,
+						"x": 2.301,
+						"y": 2.301,
+						"curve": [ 0.25, 0, 0.132, 1.43 ]
+					},
+					{ "time": 0.2, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

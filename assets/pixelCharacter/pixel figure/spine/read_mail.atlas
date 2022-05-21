@@ -1,0 +1,62 @@
+
+read_mail.png
+size: 386,209
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box_n_detail_bg
+  rotate: true
+  xy: 328, 13
+  size: 32, 33
+  orig: 32, 33
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 224, 47
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+mail
+  rotate: true
+  xy: 2, 24
+  size: 183, 220
+  orig: 183, 220
+  offset: 0, 0
+  index: -1
+maze_icon
+  rotate: true
+  xy: 224, 7
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 110, 2
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+txt1
+  rotate: false
+  xy: 2, 2
+  size: 106, 20
+  orig: 106, 20
+  offset: 0, 0
+  index: -1
+txt3
+  rotate: false
+  xy: 2, 2
+  size: 106, 20
+  orig: 106, 20
+  offset: 0, 0
+  index: -1
+txt2
+  rotate: false
+  xy: 276, 20
+  size: 50, 25
+  orig: 50, 25
+  offset: 0, 0
+  index: -1

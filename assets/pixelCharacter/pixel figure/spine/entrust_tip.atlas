@@ -1,0 +1,69 @@
+
+entrust_tip.png
+size: 849,97
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 2, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+choose
+  rotate: false
+  xy: 96, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+fight
+  rotate: false
+  xy: 190, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+mood1
+  rotate: false
+  xy: 284, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+mood2
+  rotate: false
+  xy: 378, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+mood3
+  rotate: false
+  xy: 472, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+mood4
+  rotate: false
+  xy: 566, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+mood5
+  rotate: false
+  xy: 660, 2
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1
+none
+  rotate: true
+  xy: 754, 3
+  size: 92, 93
+  orig: 92, 93
+  offset: 0, 0
+  index: -1

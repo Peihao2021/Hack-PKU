@@ -1,0 +1,196 @@
+{
+"skeleton": { "hash": "7uShodI101Zls/fQisbBMOe1wlE", "spine": "2.1.18", "width": 421, "height": 91, "images": "././" },
+"bones": [
+	{ "name": "input_box" },
+	{ "name": "choose", "parent": "input_box" },
+	{ "name": "create_input_box", "parent": "input_box" },
+	{ "name": "login_input_box", "parent": "input_box" },
+	{ "name": "border1", "parent": "choose", "x": -204.26, "y": 24.98 },
+	{ "name": "border2", "parent": "choose", "x": 204.73, "y": 23.98 },
+	{ "name": "border3", "parent": "choose", "x": -204.26, "y": -28.01 },
+	{ "name": "border4", "parent": "choose", "x": 203.73, "y": -28.01 }
+],
+"slots": [
+	{ "name": "title_page3", "bone": "input_box" },
+	{ "name": "create_input_box", "bone": "create_input_box", "attachment": "input_box" },
+	{ "name": "login_input_box", "bone": "login_input_box", "attachment": "input_box2" },
+	{ "name": "border1", "bone": "border1", "attachment": "border1" },
+	{ "name": "border2", "bone": "border2", "attachment": "border1" },
+	{ "name": "border3", "bone": "border3", "attachment": "border2" },
+	{ "name": "border4", "bone": "border4", "attachment": "border2" }
+],
+"skins": {
+	"default": {
+		"border1": {
+			"border1": { "x": 10, "width": 32, "height": 37 }
+		},
+		"border2": {
+			"border1": { "x": -10, "scaleX": -1, "width": 32, "height": 37 }
+		},
+		"border3": {
+			"border2": { "x": 10, "y": -1, "width": 32, "height": 37 }
+		},
+		"border4": {
+			"border2": { "x": -9, "y": -1, "scaleX": -1, "width": 32, "height": 37 }
+		},
+		"create_input_box": {
+			"input_box": { "width": 30, "height": 15 }
+		},
+		"login_input_box": {
+			"input_box2": { "width": 18, "height": 14 }
+		}
+	}
+},
+"animations": {
+	"create_input": {
+		"slots": {
+			"border1": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"border2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"border3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"border4": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"login_input_box": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"create_input_box": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.531, 0, 0.397, 1 ]
+					},
+					{ "time": 0.2333, "x": 1.1, "y": 1.1 }
+				]
+			},
+			"choose": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.531, 0, 0.397, 1 ]
+					},
+					{ "time": 0.2333, "x": 1.1, "y": 1.1 }
+				]
+			}
+		}
+	},
+	"login_input": {
+		"slots": {
+			"border1": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"border2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"border3": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"border4": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			},
+			"create_input_box": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"login_input_box": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"create_input_box": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.531, 0, 0.397, 1 ]
+					},
+					{ "time": 0.2333, "x": 1.1, "y": 1.1 }
+				]
+			},
+			"border4": {
+				"translate": [
+					{ "time": 0, "x": 50, "y": 4 }
+				]
+			},
+			"border3": {
+				"translate": [
+					{ "time": 0, "x": -50, "y": 4 }
+				]
+			},
+			"border2": {
+				"translate": [
+					{ "time": 0, "x": 50, "y": -4 }
+				]
+			},
+			"border1": {
+				"translate": [
+					{ "time": 0, "x": -50, "y": -4 }
+				]
+			},
+			"choose": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.531, 0, 0.397, 1 ]
+					},
+					{ "time": 0.2333, "x": 1.1, "y": 1.1 }
+				]
+			},
+			"login_input_box": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.531, 0, 0.397, 1 ]
+					},
+					{ "time": 0.2333, "x": 1.1, "y": 1.1 }
+				]
+			}
+		}
+	}
+}
+}

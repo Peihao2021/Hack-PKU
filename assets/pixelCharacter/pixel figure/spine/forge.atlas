@@ -1,0 +1,97 @@
+
+forge.png
+size: 669,198
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+end_losetxt_1
+  rotate: false
+  xy: 207, 104
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+end_losetxt_2
+  rotate: false
+  xy: 299, 104
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+end_losetxt_3
+  rotate: false
+  xy: 385, 10
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+end_losetxt_4
+  rotate: false
+  xy: 391, 104
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+end_wintxt_1
+  rotate: false
+  xy: 477, 10
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+end_wintxt_2
+  rotate: false
+  xy: 483, 104
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+end_wintxt_3
+  rotate: true
+  xy: 575, 106
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+end_wintxt_4
+  rotate: true
+  xy: 575, 14
+  size: 90, 92
+  orig: 90, 92
+  offset: 0, 0
+  index: -1
+loading_light
+  rotate: false
+  xy: 2, 46
+  size: 101, 150
+  orig: 101, 150
+  offset: 0, 0
+  index: -1
+loadingbar
+  rotate: true
+  xy: 2, 8
+  size: 36, 119
+  orig: 36, 119
+  offset: 0, 0
+  index: -1
+loadingbar2
+  rotate: true
+  xy: 2, 4
+  size: 2, 119
+  orig: 2, 119
+  offset: 0, 0
+  index: -1
+paper_light
+  rotate: false
+  xy: 123, 2
+  size: 260, 81
+  orig: 260, 81
+  offset: 0, 0
+  index: -1
+txt_light
+  rotate: false
+  xy: 105, 85
+  size: 100, 111
+  orig: 100, 111
+  offset: 0, 0
+  index: -1

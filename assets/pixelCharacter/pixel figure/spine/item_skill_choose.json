@@ -1,0 +1,56 @@
+{
+"skeleton": { "hash": "aBX6LBbcRLCgkqkWvVr9sUBMvC0", "spine": "2.1.18", "width": 85, "height": 89, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "choose", "parent": "root" },
+	{ "name": "border1", "parent": "choose", "x": -27.26, "y": 22.98 },
+	{ "name": "border2", "parent": "choose", "x": 24.73, "y": 26.98 },
+	{ "name": "border3", "parent": "choose", "x": -27.26, "y": -28.01 },
+	{ "name": "border4", "parent": "choose", "x": 24.73, "y": -28.01 }
+],
+"slots": [
+	{ "name": "border1", "bone": "border1", "attachment": "border1" },
+	{ "name": "border2", "bone": "border2", "attachment": "border1" },
+	{ "name": "border3", "bone": "border3", "attachment": "border2" },
+	{ "name": "border4", "bone": "border4", "attachment": "border2" }
+],
+"skins": {
+	"default": {
+		"border1": {
+			"border1": { "width": 32, "height": 37 }
+		},
+		"border2": {
+			"border1": { "x": 1, "y": -4, "scaleX": -1, "width": 32, "height": 37 }
+		},
+		"border3": {
+			"border2": { "y": -1, "width": 32, "height": 37 }
+		},
+		"border4": {
+			"border2": { "x": 1, "y": -1, "scaleX": -1, "width": 32, "height": 37 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"choose": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.467, 0, 0.351, 1 ]
+					},
+					{
+						"time": 0.2333,
+						"x": 1.08,
+						"y": 1.08,
+						"curve": [ 0.467, 0, 0.351, 1 ]
+					},
+					{ "time": 0.4666, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

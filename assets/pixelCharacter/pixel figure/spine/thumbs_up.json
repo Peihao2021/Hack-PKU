@@ -1,0 +1,41 @@
+{
+"skeleton": { "hash": "vuDAn3EKEqCswpBviU7nI1Ol+PA", "spine": "2.1.18", "width": 28, "height": 24, "images": "././" },
+"bones": [
+	{ "name": "root", "color": "9c9c9c00" }
+],
+"slots": [
+	{ "name": "comment_icon", "bone": "root", "color": "ffffff00", "attachment": "comment_icon" }
+],
+"skins": {
+	"default": {
+		"comment_icon": {
+			"comment_icon": { "scaleX": 2, "scaleY": 2, "width": 14, "height": 12 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"comment_icon": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.168, 0.92, 0.75, 1 ]
+					},
+					{ "time": 0.3333, "x": 4, "y": 4 }
+				]
+			}
+		}
+	}
+}
+}

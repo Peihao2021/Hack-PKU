@@ -1,0 +1,76 @@
+
+entrust_reward.png
+size: 1022,209
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+box_n_detail_bg
+  rotate: false
+  xy: 740, 33
+  size: 32, 33
+  orig: 32, 33
+  offset: 0, 0
+  index: -1
+completed_icon
+  rotate: false
+  xy: 740, 68
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+completed_icon_light
+  rotate: false
+  xy: 881, 68
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+decorate
+  rotate: true
+  xy: 2, 2
+  size: 89, 170
+  orig: 89, 170
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 532, 4
+  size: 206, 203
+  orig: 206, 203
+  offset: 0, 0
+  index: -1
+rewardgif_1
+  rotate: true
+  xy: 174, 3
+  size: 88, 90
+  orig: 88, 90
+  offset: 0, 0
+  index: -1
+rewardgif_2
+  rotate: true
+  xy: 266, 3
+  size: 88, 90
+  orig: 88, 90
+  offset: 0, 0
+  index: -1
+rewardgif_3
+  rotate: true
+  xy: 358, 3
+  size: 88, 90
+  orig: 88, 90
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 450, 71
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+txt
+  rotate: false
+  xy: 2, 93
+  size: 528, 114
+  orig: 528, 114
+  offset: 0, 0
+  index: -1

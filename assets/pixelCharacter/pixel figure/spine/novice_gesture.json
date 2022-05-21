@@ -1,0 +1,102 @@
+{
+"skeleton": { "hash": "wCvB+FxpJ4d60I9tZKTjVIl6Nhc", "spine": "2.1.18", "width": 208, "height": 168, "images": "././" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "point_dir", "parent": "root" },
+	{ "name": "point", "parent": "point_dir" }
+],
+"slots": [
+	{ "name": "point", "bone": "point", "attachment": "point" }
+],
+"skins": {
+	"default": {
+		"point": {
+			"point": { "width": 208, "height": 168 }
+		}
+	}
+},
+"animations": {
+	"gesture_enter": {
+		"slots": {
+			"point": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff00",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.2333, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"point": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.464, 0, 0.55, 1 ]
+					},
+					{ "time": 0.3666, "x": -10, "y": 0 }
+				]
+			}
+		}
+	},
+	"gesture_exit": {
+		"slots": {
+			"point": {
+				"color": [
+					{
+						"time": 0.3,
+						"color": "ffffffff",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.7333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"point": {
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.464, 0, 0.55, 1 ]
+					},
+					{ "time": 0.3666, "x": -10, "y": 0 }
+				]
+			}
+		}
+	},
+	"gesture_loop": {
+		"slots": {
+			"point": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"point": {
+				"translate": [
+					{
+						"time": 0,
+						"x": -10,
+						"y": 0,
+						"curve": [ 0.464, 0, 0.55, 1 ]
+					},
+					{
+						"time": 0.4,
+						"x": 0,
+						"y": 0,
+						"curve": [ 0.464, 0, 0.55, 1 ]
+					},
+					{ "time": 0.8, "x": -10, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

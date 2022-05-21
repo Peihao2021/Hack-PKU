@@ -1,0 +1,13 @@
+
+dig.png
+size: 52,50
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ore_picks
+  rotate: false
+  xy: 2, 2
+  size: 48, 46
+  orig: 48, 46
+  offset: 0, 0
+  index: -1

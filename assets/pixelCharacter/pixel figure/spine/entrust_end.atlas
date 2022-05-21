@@ -1,0 +1,62 @@
+
+entrust_end.png
+size: 686,384
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fail
+  rotate: false
+  xy: 2, 264
+  size: 520, 118
+  orig: 520, 118
+  offset: 0, 0
+  index: -1
+fire1
+  rotate: false
+  xy: 524, 165
+  size: 45, 55
+  orig: 45, 55
+  offset: 0, 0
+  index: -1
+fire2
+  rotate: false
+  xy: 524, 108
+  size: 45, 55
+  orig: 45, 55
+  offset: 0, 0
+  index: -1
+fire3
+  rotate: false
+  xy: 571, 165
+  size: 45, 55
+  orig: 45, 55
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 524, 222
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+normal
+  rotate: false
+  xy: 2, 144
+  size: 520, 118
+  orig: 520, 118
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 2, 2
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+victory
+  rotate: false
+  xy: 2, 24
+  size: 520, 118
+  orig: 520, 118
+  offset: 0, 0
+  index: -1

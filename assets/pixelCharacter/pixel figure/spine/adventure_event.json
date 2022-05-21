@@ -1,0 +1,197 @@
+{
+"skeleton": { "hash": "//hv3KCdesEemTAiZRGFJaw/x00", "spine": "2.1.18", "width": 292, "height": 242.72, "images": "././" },
+"bones": [
+	{ "name": "root", "y": 568 },
+	{ "name": "maze_eventbtn", "parent": "root", "length": 98.02, "y": -565.75, "rotation": 90 },
+	{ "name": "maze_eventbtn_shadow", "parent": "root", "length": 98.02, "y": -565.75, "rotation": 90 },
+	{ "name": "maze_eventbtn_waitbg", "parent": "root", "length": 98.02, "y": -565.75, "rotation": 90 },
+	{ "name": "maze_eventbtn_waitguide", "parent": "root", "length": 98.02, "y": -565.75, "rotation": 90 }
+],
+"slots": [
+	{ "name": "btn2", "bone": "maze_eventbtn_shadow", "attachment": "btn" },
+	{ "name": "btn", "bone": "maze_eventbtn", "attachment": "alpha" },
+	{ "name": "maze_eventbtn_wait", "bone": "maze_eventbtn_waitbg", "attachment": "maze_eventbtn_waitbg" },
+	{ "name": "maze_eventbtn_waitguide", "bone": "maze_eventbtn_waitguide", "attachment": "maze_eventbtn_decorate_d" }
+],
+"skins": {
+	"default": {
+		"btn": {
+			"alpha": { "x": 68, "rotation": 270, "width": 32, "height": 23 }
+		},
+		"btn2": {
+			"btn": { "x": 70, "scaleX": 4, "scaleY": 4, "rotation": -90, "width": 73, "height": 37 }
+		},
+		"maze_eventbtn_wait": {
+			"maze_eventbtn_waitbg": { "x": 70, "scaleX": 2, "scaleY": 2, "rotation": -90, "width": 143, "height": 72 }
+		},
+		"maze_eventbtn_waitguide": {
+			"maze_eventbtn_decorate_d": { "scaleX": 2, "scaleY": 2, "rotation": -29.99, "width": 84, "height": 52 }
+		}
+	}
+},
+"animations": {
+	"appear": {
+		"slots": {
+			"btn": {
+				"color": [
+					{
+						"time": 0,
+						"color": "ffffff76",
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.0666, "color": "ffffffff" }
+				]
+			},
+			"btn2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"maze_eventbtn_wait": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"maze_eventbtn_waitguide": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"maze_eventbtn": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 0.2,
+						"y": 0.2,
+						"curve": [ 0.258, 0.74, 0.75, 1 ]
+					},
+					{
+						"time": 0.1,
+						"x": 1.5,
+						"y": 1.5,
+						"curve": [ 0.527, 0, 0.448, 1 ]
+					},
+					{
+						"time": 0.2333,
+						"x": 0.9,
+						"y": 0.9,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"loop": {
+		"slots": {
+			"btn": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"btn2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffff7e" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"maze_eventbtn_wait": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"maze_eventbtn_waitguide": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"maze_eventbtn": {
+				"scale": [
+					{
+						"time": 0,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.23, 0.44, 0.692, 1 ]
+					},
+					{
+						"time": 0.0666,
+						"x": 0.95,
+						"y": 0.95,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.2,
+						"x": 1.05,
+						"y": 1.05,
+						"curve": [ 0.431, 0, 0.572, 1 ]
+					},
+					{ "time": 0.2666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2.6666, "x": 1, "y": 1 }
+				]
+			},
+			"maze_eventbtn_shadow": {
+				"scale": [
+					{
+						"time": 0.1,
+						"x": 1,
+						"y": 1,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 0.3333, "x": 1.5, "y": 1.5 }
+				]
+			}
+		}
+	},
+	"wait": {
+		"slots": {
+			"btn": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"btn2": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" }
+				]
+			},
+			"maze_eventbtn_wait": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			},
+			"maze_eventbtn_waitguide": {
+				"color": [
+					{ "time": 0, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"maze_eventbtn_waitguide": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": 0,
+						"curve": [ 0.561, -0.88, 0.233, 1.5 ]
+					},
+					{
+						"time": 1.3333,
+						"angle": -10.23,
+						"curve": [ 0.68, -0.47, 0.194, 1.68 ]
+					},
+					{
+						"time": 3.3333,
+						"angle": 17.23,
+						"curve": [ 0.68, -1.09, 0.319, 1.66 ]
+					},
+					{ "time": 4, "angle": 0 }
+				]
+			}
+		}
+	}
+}
+}

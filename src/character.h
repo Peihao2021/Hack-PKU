@@ -23,6 +23,9 @@ class Character {
     Skill skill;
     int attackInterval;
     int attackCounter;
+    int speedOnLand;
+    int speedInSea;
+    int type;
 };
 
 bool operator==(const Character& lhs, const Character& rhs);

@@ -51,9 +51,19 @@ void updateMobPos(std::list<Character>& mobs, Character& player) {
 
 void drawMobs(const std::list<Character>& mobs) {
     static Texture2D MOB_TEXT = LoadTexture("assets/ghost/1.png");
+    static Texture2D MOB_TEXTS[5] = {
+        LoadTexture("assets/slimes/1.png"),
+        LoadTexture("assets/slimes/2.png"),
+        LoadTexture("assets/slimes/3.png"),
+        LoadTexture("assets/slimes/4.png"),
+        LoadTexture("assets/slimes/5.png")
+    };
     for (auto& c : mobs) {
         // std::cout << "ok" << std::endl;
-        DrawTextureEx(MOB_TEXT, c.pos, 0.f, 1.f, WHITE);
+        if(c.type == 6)
+            DrawTextureEx(MOB_TEXT, c.pos, 0.f, 1.f, WHITE);
+        else
+            DrawTextureEx(MOB_TEXTS[c.type - 1], c.pos, 0.f, 1.f, WHITE);
     }
 }
 
@@ -62,7 +72,6 @@ double getDistance(const Vector2& a, const Vector2& b) {
 }
 
 Vector2 getBirthPos(Map& map) {
-    srand(time(0));
     int randx, randy = 0;
     do {
         randx = rand() % WIDTH;

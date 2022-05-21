@@ -11,6 +11,7 @@
 enum orientation { Down = 0, Left = 1, Right = 2, Up = 3 };
 
 int main(void) {
+    srand(time(0));
     const int screenWidth = 1920;
     const int screenHeight = 1080;
     // const int birth_x = 800;
@@ -24,6 +25,9 @@ int main(void) {
         player_texts[i] = LoadTexture(file.c_str());
     }
     Texture2D soccer_text = LoadTexture("assets/soccer.png");
+    Texture2D stone_text = LoadTexture("assets/decoration/stone.png");
+    Texture2D cactus_text = LoadTexture("assets/decoration/cactus.png");
+    Texture2D branch_text = LoadTexture("assets/decoration/branch.png");
 
     InitAudioDevice();
     Music bgm = LoadMusicStream("assets/bgm.mp3");
@@ -56,6 +60,23 @@ int main(void) {
     size_t animationCounter = 0;
     size_t maxMobAcount = 200;
     size_t frameCounter = 0;
+
+    std::list<Vector2> stones; //generate stones
+    for(int i = 0; i < 100; i++){
+        Vector2 pos = getBirthPos(map);
+        stones.push_back(pos);
+    }
+    std::list<Vector2> cactus; //generate cactus
+    for(int i = 0; i < 50; i++){
+        Vector2 pos = getBirthPos(map);
+        cactus.push_back(pos);
+    }
+    std::list<Vector2> branches; //generate cactus
+    for(int i = 0; i < 50; i++){
+        Vector2 pos = getBirthPos(map);
+        branches.push_back(pos);
+    }
+    
     while (!WindowShouldClose()) {
         UpdateMusicStream(bgm);
         frameCounter++;
@@ -71,10 +92,20 @@ int main(void) {
             int randy = rand() % HEIGHT;
             Character tmp;
             tmp.pos = {(float)randx * 31, (float)randy * 31};
-            tmp.speed = 3;
-            tmp.attackInterval = 40;
-            mobs.push_back(tmp);
-            printf("current mob number: %lld\n", mobs.size());
+            int mobtype = rand() % 2;
+            if(mobtype == 1){
+                tmp.type = 6;
+                tmp.speedOnLand = 3;
+                tmp.speedInSea = 2;
+                tmp.attackInterval = 40;
+                mobs.push_back(tmp);
+            }else{
+                tmp.type = rand() % 5 + 1;
+                tmp.speedOnLand = 2;
+                tmp.speedInSea = 5;
+                tmp.attackInterval = 40;
+                mobs.push_back(tmp);
+            }
         }
 
         for (auto& c : mobs) {  // set mob speed
@@ -85,9 +116,9 @@ int main(void) {
                 c.speed = -c.speed;
             } else if (map.map[axis_x][axis_y] == BlockType::Water ||
                        map.map[axis_x][axis_y] == BlockType::Sea) {
-                c.speed = 1 + rand() % 2;
+                c.speed = c.speedInSea + rand() % 2 - 1;
             } else {
-                c.speed = 2 + rand() % 2;
+                c.speed = c.speedOnLand + rand() % 2 - 1;
             }
         }
 
@@ -214,6 +245,15 @@ int main(void) {
 
         BeginMode2D(camera);
         drawMap(map);    // draw map
+        for(auto& st : stones){
+            DrawTextureEx(stone_text, st, 0.f, 1.f, WHITE);
+        }
+        for(auto& cac : cactus){
+            DrawTextureEx(cactus_text, cac, 0.f, 1.f, WHITE);
+        }
+        for(auto& br : branches){
+            DrawTextureEx(branch_text, br, 0.f, 1.f, WHITE);
+        }
         drawMobs(mobs);  // draw mobs
         int numberOfPic = 0;
         if (hasKeyPressed) {

@@ -2,6 +2,7 @@
 #include <cmath>
 
 Character::Character() {
+    type = 0;
     hp = 100;
     attackCounter = 0;
 }

@@ -72,7 +72,7 @@ int main(void) {
             if (axis_x >= WIDTH || axis_y >= HEIGHT || axis_x <= 0 ||
                 axis_y <= 0) {
                 c.speed = -c.speed;
-            } else if (map.map[axis_x][axis_y] == BlockType::Water) {
+            } else if (map.map[axis_x][axis_y] == BlockType::Water || map.map[axis_x][axis_y] == BlockType::Sea) {
                 c.speed = 2;
             } else {
                 c.speed = 3;
@@ -96,7 +96,7 @@ int main(void) {
         int axis_y = player_char.pos.y / 31;
         if (axis_x >= WIDTH || axis_y >= HEIGHT || axis_x <= 0 || axis_y <= 0) {
             speed = -speed;
-        } else if (map.map[axis_x][axis_y] == BlockType::Water) {
+        } else if (map.map[axis_x][axis_y] == BlockType::Water || map.map[axis_x][axis_y] == BlockType::Sea) {
             speed = 1;
         } else {
             speed = 5;
@@ -191,7 +191,7 @@ int main(void) {
         drawMobs(mobs);
         DrawTextureEx(player_text, player_char.pos, 0.f, 1.f, WHITE);
         for (auto& soccer : soccers) {
-            DrawTextureEx(soccer_text, soccer.pos, 0.f, 0.3f, WHITE);
+            DrawTextureEx(soccer_text, soccer.pos, 0.f, 1.f, WHITE);
         }
 
         EndMode2D();

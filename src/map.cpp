@@ -7,10 +7,13 @@ Map::Map() {
 
 void Map::initialize(Perlin& noise) {
     double thre = -100.0;
+    double thre1 = -700.0;
     for (int i = 0; i < WIDTH; i++) {
         for (int j = 0; j < HEIGHT; j++) {
             double val = noise.perlinNoise(i, j);
-            if (val < thre)
+            if (val < thre1)
+                map[i][j] = BlockType::Sea;
+            else if(val < thre)
                 map[i][j] = BlockType::Water;
             else
                 map[i][j] = BlockType::Sand;
